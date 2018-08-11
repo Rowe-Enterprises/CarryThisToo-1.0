@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel='stylesheet' href='node_modules/fullcalendar/dist/fullcalendar.min.css' />
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forum.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="container">
+                <h4 class="grey-text text-darken-3">Ask New Question</h4>
+                <div class="row">
+                    <form class="col s12 newpost" action="#" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="title">Title</label>
+                                <input id="title" name="title" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="title">Body</label>
+                                <textarea id="title" name="title" type="text" class="validate"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="title">Tags</label>
+                                <input id="title" name="title" type="text" class="validate">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn blue accent-2">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/firebase-creds.js"></script>
+    <script type="text/javascript" src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+    <script src='node_modules/moment/moment.js'></script>
+    <script src='node_modules/fullcalendar/dist/fullcalendar.min.js'></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
