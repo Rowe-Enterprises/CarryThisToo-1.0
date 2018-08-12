@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body>
+		<div class="main" style="display: block;">
+			<div class="cart card row">
+				<h6 class="bold uppercase">Cart</h6>
+				<ul class="collection">
+					<li class="collection-item">No items added</li>
+				</ul>
+				<div>
+					<p class="col l6 margin-0">Total: </p>
+					<h6 class="bold col l6 margin-0 right-align">$0.0</h6><br><br>	
+				</div>
+				<a class="btn blue accent-2 col l12">CHECKOUT</a>
+			</div>
+			<section class="login-signup">
+				<div class="container">
+					<h3>Register</h3>
+					<div class="header"><h5>Personal/Business Details</h5></div>
+					<div class="body">
+						<div class="row">
+							<div class="col l8 offset-l2">
+								<div class="col l6">
+									<input id="first_name" name="first_name" type="text" class="validate" placeholder="First Name">
+								</div>
+								<div class="col l6">
+									<input id="last_name" name="last_name" type="text" class="validate" placeholder="Last Name">
+								</div>
+								<div class="col l6">
+									<input id="business_name" name="business_name" type="text" class="validate" placeholder="Business Name">
+								</div>
+								<div class="col l6">
+									<input id="email" name="email" type="email" class="validate" placeholder="Email" disabled>
+								</div>
+								<div class="col l12">
+									<input id="business_address_1" name="business_address_1" type="text" class="validate" placeholder="Business Address Line 1">
+								</div>
+								<div class="col l12">
+									<input id="business_address_2" name="business_address_2" type="text" class="validate" placeholder="Business Address Line 2">
+								</div>
+								<div class="col l6">
+									<input id="business_phone" name="business_phone" type="tel" class="validate" placeholder="Business Phone">
+								</div>
+								<div class="col l6">
+									<input id="federal_tax_ein" name="federal_tax_ein" type="text" class="validate" placeholder="Federal Tax EIN">
+								</div>
+								<div class="col l4">
+									<input id="city" name="city" type="text" class="validate" placeholder="City">
+								</div>
+								<div class="col l4">
+									<input id="state" name="state" type="text" class="validate" placeholder="State">
+								</div>
+								<div class="col l4">
+									<input id="zip_code" name="zip_code" type="text" class="validate" placeholder="Zip Code">
+								</div>
+								<div class="col l6">
+									<input id="password" name="password" type="password" class="validate" placeholder="Create Password">
+								</div>
+								<div class="col l6">
+									<input id="confirm_password" name="confirm_password" type="password" class="validate" placeholder="Confirm Password">
+								</div>
+								<div class="col l4 offset-l4">
+									<a class="btn blue accent-2" id="confirm_btn" href="#">CONFIRM</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header container"><h5>Choose a Plan</h5></div>
+				<div class="body">
+					<div class="row flex-container">
+						<!-- <h6 class="center-align">Flexible Plan</h6> -->
+						<div class="pricing-card card">
+							<div class="pricing-content center row">
+								<h5 class="bold brown-text">BRONZE</h5>
+								<h6 class="bold margin-bottom-0">Save 11%</h6>
+								<h2 class="bold margin-bottom-0 margin-top-0">$269.99</h2>
+								<h5 class="bold margin-bottom-0 strikethrough">$299.84</h5>
+								<p class="margin-top-0">per year</p>
+								<div>
+									<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
+									<a class="btn green accent-2 col l8 offset-l2">CUSTOMIZE</a>
+								</div>
+								<h3 class="bold margin-bottom-0 margin-top-0">$24.99</h3>
+								<p class="margin-top-0">per month</p>
+							</div>
+						<!-- <div class="a-la-carte card"></div> -->
+						</div>
+						<!-- <h6 class="center-align">Smooth Plans</h6> -->
+						<div class="card">
+							<div class="pricing-content center row">
+								<h5 class="bold grey-text text-lighten-1">SILVER</h5>
+								<h6 class="bold margin-bottom-0">Save 6%</h6>
+								<h2 class="bold margin-bottom-0 margin-top-0">$529.99</h2>
+								<h5 class="bold margin-bottom-0 strikethrough">$559.97</h5>
+								<p class="margin-top-0">per year</p>
+								<div>
+									<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
+								</div>
+								<h3 class="bold margin-bottom-0 margin-top-0">$279.99</h3>
+								<p class="margin-top-0">two installments</p>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="pricing-content center row">
+								<h5 class="bold amber-text accent-2">GOLD</h5>
+								<h6 class="bold margin-bottom-0">Save 10%</h6>
+								<h2 class="bold margin-bottom-0 margin-top-0">$1,515.99</h2>
+								<h5 class="bold margin-bottom-0 strikethrough">$1,579.99</h5>
+								<p class="margin-top-0">per year</p>
+								<div>
+									<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
+								</div>
+								<h3 class="bold margin-bottom-0 margin-top-0">$789.99</h3>
+								<p class="margin-top-0">two installments</p>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="pricing-content center row">
+								<h5 class="bold blue-grey-text lighten-2">PLATINUM</h5>
+								<h6 class="bold margin-bottom-0">Save 10%</h6>
+								<h2 class="bold margin-bottom-0 margin-top-0">$2,495.99</h2>
+								<h5 class="bold margin-bottom-0 strikethrough">$2,599.99</h5>
+								<p class="margin-top-0">per year</p>
+								<div>
+									<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
+								</div>
+								<h3 class="bold margin-bottom-0 margin-top-0">$1,299.99</h3>
+								<p class="margin-top-0">two installments</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header container"><h5>Choose your Payment Method</h5></div>
+				<div class="body container"></div>
+			</section>
+		</div>
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script defer src="/__/firebase/5.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/signup.js"></script>
+
+	</body>
+</html>

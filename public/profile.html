@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+	</head>
+
+	<body>
+        <div class="main">
+            <section>
+				<div class="navbar-fixed">
+					<nav class="white">
+						<div class="nav-wrapper container">
+							<a href="#" data-target="slide-out" class="sidenav-trigger grey-text" style="display: inline-block;"><i class="material-icons">menu</i></a>
+							<a href="#" class="brand-logo blue-text accent-2 bold">Profile</a>
+							<ul class="right">
+								<li><a href="#" class="grey-text text-darken-1 bold dropdown-trigger" data-target="dropdown-notification"><i class="material-icons">notifications</i></a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				
+				<ul id="slide-out" class="sidenav">
+					<li><div class="user-view">
+						<div class="background">
+						<img class="right" src="asset/ctt_small.png">
+						</div>
+						<a href="#name"><span class="name">Instructor Name</span></a>
+						<a href="#email"><span class="email">someone@something.com</span></a>
+						<a href="#uid"><span class="email">D7E2X5</span></a>
+					</div></li>
+					<li><a class="waves-effect" href="instructor.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
+					<li><a class="waves-effect" href="/forum.html"><i class="material-icons">message</i>Message Center</a></li>
+					<li><a class="waves-effect" href="chat.html"><i class="material-icons">format_quote</i>Admin Chat</a></li>
+					<li class="active"><a class="waves-effect" href="#"><i class="material-icons">person</i>Profile</a></li>
+					<li><a id="logout" class="waves-effect" href="#logout"><i class="material-icons">launch</i>Logout</a></li>
+					<!-- <li><a id="logout" href="#" class="grey-text text-darken-1 bold">LOGOfUT</a></li> -->
+				</ul>
+            </section>
+            
+            <section id="profile" class="container">
+				<div class="row card">
+                    <div class="card-content">
+                        <h5>Personal Detail</h5>
+                        <p>First Name: <span id="first_name">John</span></p>
+                        <p>Last Name: <span id="last_name">Doe</span></p>
+                        <p>Email: <span id="email">someone@something.com</span></p>
+                        <p>Business Name: <span id="business_name">Some Gun Shop</span></p>
+                        <p>Business Address Line 1: <span id="business_line_1">Address 1</span></p>
+                        <p>Business Address Line 2: <span id="business_line_2">Address 2</span></p>
+                        <p>Business Phone: <span id="business_phone">+1 78451 68542</span></p>
+                        <p>City: <span id="business_city">New York</span></p>
+                        <p>State: <span id="business_state">New York</span></p>
+                        <p>City: <span id="business_country">USA</span></p>
+                        <p>Zip Code: <span id="business_zip_code">100001</span></p>
+                        <p>Federal Tax EIN: <span id="federal_tax_ein">S8ECF4Q1</span></p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn blue accent-2">EDIT</a>
+                    </div>
+				</div>
+
+				<div class="row card">
+                    <div class="card-content">
+                        <div>
+                            <h5>Document Details <i class="material-icons red-text">warning</i></h5>
+                        </div>
+                        <p>Document Status: Pending</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn red accent-2">DOWNLOAD</a>
+                        <a href="#" class="btn blue accent-2">UPLOAD</a>
+                    </div>
+                </div>
+
+				<div class="row card">
+                    <div class="card-content">
+                        <h5>Plan Detail</h5>
+                        <p id="business_plan">Bronze Plan</p>
+                        <p>Details of the plan Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta non consequuntur quia eos aut veritatis voluptatem voluptates aperiam. Libero iure doloribus sequi necessitatibus accusamus culpa temporibus, hic facilis eos molestias.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn blue accent-2">UPGRADE</a>
+                    </div>
+				</div>
+
+				<div class="row card">
+                    <div class="card-content">
+                        <h5>Payment Detail</h5>
+                        <p>Card Detail</p>
+                        <p>This month's payment due</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn blue accent-2">UPDATE</a>
+                    </div>
+				</div>
+			</section>
+        </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/5.3.1/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+
+	</body>
+</html>
