@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     auth.onAuthStateChanged(firebaseUser => {
         if(firebaseUser){
-            window.user = firebaseUser;
-            
+            // window.user = firebaseUser;
+            console.debug('begin login');
             if(firebaseUser.email == "admin@carrythistoo.com"){
                 window.location = root.replace('login', 'admin');
             }else{

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('pass update failed');
             });
 
-            profileData.displayName = inputs['first_name'] + " " + inputs['last_name'];
+            profileData.displayName = inputs['first_name'].value + " " + inputs['last_name'].value;
             profileData.emailVerified = true;
             profileData.phoneNumber = inputs['business_phone'];
 
@@ -41,9 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
             password = userData['password'];
             delete userData['confirm_password'];
             delete userData['password'];
-            userData['business_plan'] = 'bronze';
+            userData['business_plan'] = 'Bronze Plan';
             userData['updated'] = true;
-
+            userData['form_status'] = false;
+            userData['form_verified'] = false;
+            
             db.collection('users').where('email', '==', email).get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     // doc.data() is never undefined for query doc snapshots
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // console.log();
                     userRef.update(userData).then(function() {
                         console.log("Document successfully updated!");
-                        window.location = root.replace('signup', 'instructor');
+                        window.location.href = 'instructor.html';
                     })
                     .catch(function(error) {
                         // The document probably doesn't exist.

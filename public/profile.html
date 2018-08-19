@@ -49,34 +49,51 @@
 				<div class="row card">
                     <div class="card-content">
                         <h5>Personal Detail</h5>
-                        <p>First Name: <span id="first_name">John</span></p>
-                        <p>Last Name: <span id="last_name">Doe</span></p>
-                        <p>Email: <span id="email">someone@something.com</span></p>
-                        <p>Business Name: <span id="business_name">Some Gun Shop</span></p>
-                        <p>Business Address Line 1: <span id="business_line_1">Address 1</span></p>
-                        <p>Business Address Line 2: <span id="business_line_2">Address 2</span></p>
-                        <p>Business Phone: <span id="business_phone">+1 78451 68542</span></p>
-                        <p>City: <span id="business_city">New York</span></p>
-                        <p>State: <span id="business_state">New York</span></p>
-                        <p>City: <span id="business_country">USA</span></p>
-                        <p>Zip Code: <span id="business_zip_code">100001</span></p>
-                        <p>Federal Tax EIN: <span id="federal_tax_ein">S8ECF4Q1</span></p>
+                        <div class="row">
+                            <div class="col l6"><p class="detail-label bold">Unique Id: <div class="detail-box"><p id="uid" class="profile-detail-box">John</p></div></div>
+                        </div>
+                        <div class="row">
+                            <div class="col l6"><p class="detail-label bold">First Name: <div class="detail-box"><p id="first_name" class="profile-detail-box">John</p></div></div>
+                            <div class="col l6"><p class="detail-label bold">Last Name: <div class="detail-box"><p id="last_name">Doe</p></div></div>
+                        </div>
+                        <div class="row">
+                            <div class="col l6"><p class="detail-label bold">Email: <div class="detail-box"><p id="email">someone@something.com</p></div></div>
+                            <div class="col l6"><p class="detail-label bold">Business Name: <div class="detail-box"><p id="business_name">Some Gun Shop</p></div></div>
+                        </div>
+                        <div class="row">
+                                <div class="col l6"><p class="detail-label bold">Business Address Line 1: <div class="detail-box"><p id="business_line_1">Address 1</p></div></div>
+                                <div class="col l6"><p class="detail-label bold">Business Address Line 2: <div class="detail-box"><p id="business_line_2">Address 2</p></div></div>
+                        </div>
+                        <div class="row">
+                                <div class="col l6"><p class="detail-label bold">Business Phone: <div class="detail-box"><p id="business_phone">+1 78451 68542</p></div></div>
+                                <div class="col l6"><p class="detail-label bold">Federal Tax EIN: <div class="detail-box"><p id="federal_tax_ein">S8ECF4Q1</p></div></div>
+                        </div>
+                        <div class="row">
+                                <div class="col l6"><p class="detail-label bold">City: <div class="detail-box"><p id="business_city">New York</p></div></div>
+                                <div class="col l6"><p class="detail-label bold">State: <div class="detail-box"><p id="business_state">New York</p></div></div>
+                        </div>
+                        <div class="row">
+                            <div class="col l6"><p class="detail-label bold">Country: <div class="detail-box"><p id="business_country">USA</p></div></div>
+                            <div class="col l6"><p class="detail-label bold">Zip Code: <div class="detail-box"><p id="business_zip_code">100001</p></div></div>
+                        </div>
                     </div>
                     <div class="card-action">
                         <a href="#" class="btn blue accent-2">EDIT</a>
                     </div>
 				</div>
 
-				<div class="row card">
+				<div id="document-card" class="row card">
                     <div class="card-content">
                         <div>
-                            <h5>Document Details <i class="material-icons red-text">warning</i></h5>
+                            <h5>Document Details</h5>
                         </div>
-                        <p>Document Status: Pending</p>
+                        <p>Document Status: <span id="document-status">Pending</span></p>
+                        <p>Verification Status: <span id="verification-status">Not Verified</span></p>
+                        <p>Please download, print the form and fill in the details and upload it. We'll verify the form and activate your account.</p>
                     </div>
                     <div class="card-action">
-                        <a href="#" class="btn red accent-2">DOWNLOAD</a>
-                        <a href="#" class="btn blue accent-2">UPLOAD</a>
+                        <a href="asset/W-9 Form.pdf" target="_blank" class="btn grey darken-1">DOWNLOAD</a>
+                        <a href="#upload_modal" class="btn blue accent-2 waves-effect waves-light modal-trigger">UPLOAD</a>
                     </div>
                 </div>
 
@@ -102,6 +119,36 @@
                     </div>
 				</div>
 			</section>
+        </div>
+
+        <div id="upload_modal" class="modal">
+            <div class="modal-content">
+                <h4>Upload W9 Form</h4>
+                <div id="drop-area" class="row valign-wrapper">
+                    <div class="col l8 offset-l2 center">
+                        <form class="my-form">
+                            <p>Drag and Drop or Upload your scanned W9 Form in pdf format</p>
+                            <input type="file" id="fileElem" accept="application/pdf" onchange="javascript:handleFiles(this.files)">
+                            <label id="select-btn" class="btn blue accent-2" for="fileElem">SELECT</label>
+                        </form>
+                        <div class="loader-container">
+                            <div id="gallery">
+                                <svg style="width:72px;height:72px;" viewBox="0 0 24 24">
+                                    <path fill="#f44336" d="M11.43,10.94C11.2,11.68 10.87,12.47 10.42,13.34C10.22,13.72 10,14.08 9.92,14.38L10.03,14.34V14.34C11.3,13.85 12.5,13.57 13.37,13.41C13.22,13.31 13.08,13.2 12.96,13.09C12.36,12.58 11.84,11.84 11.43,10.94M17.91,14.75C17.74,14.94 17.44,15.05 17,15.05C16.24,15.05 15,14.82 14,14.31C12.28,14.5 11,14.73 9.97,15.06C9.92,15.08 9.86,15.1 9.79,15.13C8.55,17.25 7.63,18.2 6.82,18.2C6.66,18.2 6.5,18.16 6.38,18.09L5.9,17.78L5.87,17.73C5.8,17.55 5.78,17.38 5.82,17.19C5.93,16.66 6.5,15.82 7.7,15.07C7.89,14.93 8.19,14.77 8.59,14.58C8.89,14.06 9.21,13.45 9.55,12.78C10.06,11.75 10.38,10.73 10.63,9.85V9.84C10.26,8.63 10.04,7.9 10.41,6.57C10.5,6.19 10.83,5.8 11.2,5.8H11.44C11.67,5.8 11.89,5.88 12.05,6.04C12.71,6.7 12.4,8.31 12.07,9.64C12.05,9.7 12.04,9.75 12.03,9.78C12.43,10.91 13,11.82 13.63,12.34C13.89,12.54 14.18,12.74 14.5,12.92C14.95,12.87 15.38,12.85 15.79,12.85C17.03,12.85 17.78,13.07 18.07,13.54C18.17,13.7 18.22,13.89 18.19,14.09C18.18,14.34 18.09,14.57 17.91,14.75M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M17.5,14.04C17.4,13.94 17,13.69 15.6,13.69C15.53,13.69 15.46,13.69 15.37,13.79C16.1,14.11 16.81,14.3 17.27,14.3C17.34,14.3 17.4,14.29 17.46,14.28H17.5C17.55,14.26 17.58,14.25 17.59,14.15C17.57,14.12 17.55,14.08 17.5,14.04M8.33,15.5C8.12,15.62 7.95,15.73 7.85,15.81C7.14,16.46 6.69,17.12 6.64,17.5C7.09,17.35 7.68,16.69 8.33,15.5M11.35,8.59L11.4,8.55C11.47,8.23 11.5,7.95 11.56,7.73L11.59,7.57C11.69,7 11.67,6.71 11.5,6.47L11.35,6.42C11.33,6.45 11.3,6.5 11.28,6.54C11.11,6.96 11.12,7.69 11.35,8.59Z" />
+                                </svg>
+                                <p id="file-name">W9 Form.pdf</p>
+                            </div>
+                            <div class="progress col l6 offset-l3 blue lighten-4">
+                                <div id="progress-bar" class="determinate blue accent-2"></div>
+                            </div>
+                            <p id="upload-text" class="col l12">Uploading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">DONE</a>
+            </div>
         </div>
 
     <!--JavaScript at end of body for optimized loading-->
