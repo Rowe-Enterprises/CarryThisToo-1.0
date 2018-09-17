@@ -1,0 +1,336 @@
+/* Global */
+input, textarea .input-field{
+    /* width: 90% !important; */
+    border: 1px solid #BDBDBD !important;
+    font-weight: 700;
+    text-indent: 16px;
+    margin: 8px 0px !important;
+}
+
+input::placeholder{
+    color: #BDBDBD;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]),textarea.materialize-textarea,.chips .input-field,.chips.focus{
+    color: #434343 !important;
+    border-bottom: 1px solid #448AFF !important;
+    -webkit-box-shadow:  0 1px 0 0 #448AFF;
+            box-shadow:  0 1px 0 0 #448AFF;
+    font-weight: 700;
+}
+
+input.invalid:not([type]), input.invalid:not([type]):focus, input[type=text].invalid:not(.browser-default), input[type=text].invalid:not(.browser-default):focus, input[type=password].invalid:not(.browser-default), input[type=password].invalid:not(.browser-default):focus, input[type=email].invalid:not(.browser-default), input[type=email].invalid:not(.browser-default):focus, input[type=url].invalid:not(.browser-default), input[type=url].invalid:not(.browser-default):focus, input[type=time].invalid:not(.browser-default), input[type=time].invalid:not(.browser-default):focus, input[type=date].invalid:not(.browser-default), input[type=date].invalid:not(.browser-default):focus, input[type=datetime].invalid:not(.browser-default), input[type=datetime].invalid:not(.browser-default):focus, input[type=datetime-local].invalid:not(.browser-default), input[type=datetime-local].invalid:not(.browser-default):focus, input[type=tel].invalid:not(.browser-default), input[type=tel].invalid:not(.browser-default):focus, input[type=number].invalid:not(.browser-default), input[type=number].invalid:not(.browser-default):focus, input[type=search].invalid:not(.browser-default), input[type=search].invalid:not(.browser-default):focus, textarea.materialize-textarea.invalid, textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid>input.select-dropdown, .select-wrapper.invalid>input.select-dropdown:focus{
+    color: #434343 !important;
+    border-bottom: 1px solid #BDBDBD !important;
+    -webkit-box-shadow:  0 0px 0 0 #BDBDBD;
+            box-shadow:  0 0px 0 0 #BDBDBD;
+    font-weight: 700;
+}
+
+input.valid:not([type]), input.valid:not([type]):focus, input[type=text].valid:not(.browser-default), input[type=text].valid:not(.browser-default):focus, input[type=password].valid:not(.browser-default), input[type=password].valid:not(.browser-default):focus, input[type=email].valid:not(.browser-default), input[type=email].valid:not(.browser-default):focus, input[type=url].valid:not(.browser-default), input[type=url].valid:not(.browser-default):focus, input[type=time].valid:not(.browser-default), input[type=time].valid:not(.browser-default):focus, input[type=date].valid:not(.browser-default), input[type=date].valid:not(.browser-default):focus, input[type=datetime].valid:not(.browser-default), input[type=datetime].valid:not(.browser-default):focus, input[type=datetime-local].valid:not(.browser-default), input[type=datetime-local].valid:not(.browser-default):focus, input[type=tel].valid:not(.browser-default), input[type=tel].valid:not(.browser-default):focus, input[type=number].valid:not(.browser-default), input[type=number].valid:not(.browser-default):focus, input[type=search].valid:not(.browser-default), input[type=search].valid:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown{
+    color: #434343 !important;
+    border-bottom: 1px solid #BDBDBD !important;
+    -webkit-box-shadow:  0 0px 0 0 #BDBDBD;
+            box-shadow:  0 0px 0 0 #BDBDBD;
+    font-weight: 700;
+}
+
+input[type=submit]{
+    text-indent: 0;
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+textarea{
+    padding: 0 !important;
+    padding-top: 16px !important;
+    padding-left: 16px !important;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    height: 150px;
+    resize: none;
+    outline: none;
+    border: 1px solid #BDBDBD;
+    color: #434343 !important;
+}
+
+textarea:not([type]):focus:not([readonly]), textarea[type=text]:not(.browser-default):focus:not([readonly]), textarea[type=password]:not(.browser-default):focus:not([readonly]), textarea[type=email]:not(.browser-default):focus:not([readonly]), textarea[type=url]:not(.browser-default):focus:not([readonly]), textarea[type=time]:not(.browser-default):focus:not([readonly]), textarea[type=date]:not(.browser-default):focus:not([readonly]), textarea[type=datetime]:not(.browser-default):focus:not([readonly]), textarea[type=datetime-local]:not(.browser-default):focus:not([readonly]), textarea[type=tel]:not(.browser-default):focus:not([readonly]), textarea[type=number]:not(.browser-default):focus:not([readonly]), textarea[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]),textarea.materialize-textarea,.chips .input-field,.chips.focus{
+    border: 1px solid #BDBDBD;
+    border-bottom: 1px solid #448AFF !important;
+    -webkit-box-shadow:  0 1px 0 0 #448AFF;
+            box-shadow:  0 1px 0 0 #448AFF;
+    font-weight: 700;
+}
+
+input[type=submit]{
+    /* border: none; */
+    outline: none;
+    text-indent: none;
+}
+
+textarea:focus{
+    border: none;
+    outline: none;
+}
+
+textarea::-webkit-scrollbar-track{
+	background-color: #F5F5F5;
+}
+
+textarea::-webkit-scrollbar{
+	width: 10px;
+	background-color: #BDBDBD;
+}
+
+textarea::-webkit-scrollbar-thumb{
+	background-color: #448AFF;
+}
+
+.padding-bottom-0{
+    padding-bottom: 0px !important;
+}
+
+.padding-16{
+    padding: 16px !important;
+}
+
+.padding-0{
+    padding: 0px !important;
+}
+
+.margin-0{
+    margin: 0px !important;
+}
+
+.margin-bottom-0{
+    margin-bottom: 0px !important;
+}
+
+.margin-top-0{
+    margin-top: 0px !important;
+}
+
+.margin-right-8{
+    margin-right: 8px !important;
+}
+
+.margin-left-16{
+    margin-left: 16px !important;
+}
+
+.margin-right-16{
+    margin-right: 16px !important;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.flex-container{
+    width: 85% !important;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+.flex-container-features{
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.flex-container .card{
+    width: 22% !important;
+}
+
+.card .pricing-content{
+    padding: 16px !important;
+}
+
+.features-list{
+    border: none !important;
+}
+
+.features-list .collection-item{
+    border-radius: 0px !important;
+}
+
+.cart{
+    width: 300px !important;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    padding: 16px !important;
+    /* display: none; */
+}
+
+.header-collapsible{
+    outline: 1px solid #eee;
+    padding: 16px;
+}
+
+.body-collapsible{
+    outline: 1px solid #eee;
+    padding: 16px;
+    height: auto;
+    /* display: none; */
+}
+
+.chat{
+    height: 100vh;
+}
+
+.chat-container{
+    height: 80% !important;
+}
+
+.chat-container .card-content{
+    height: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.chat-container .card-action{
+    height: 10%;
+}
+
+.message-chip{
+    max-width: 70% !important;
+    height: auto !important;
+    line-height: 20px !important;
+    padding: 16px !important;
+    /* margin: 16px 0px !important; */
+}
+
+.detail-label{
+    font-size: 14px;
+    margin-bottom: 8px !important;
+}
+
+.detail-box{
+    width: 100%;
+    border: 1px solid #BDBDBD;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    height: 400px;
+    margin: 50px auto;
+    padding: 20px;
+}
+#drop-area.highlight {
+    border-color: purple;
+}
+p {
+    margin-top: 0;
+}
+.my-form {
+    margin-bottom: 10px;
+}
+#gallery {
+    margin-top: 10px;
+}
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.button:hover {
+    background: #ddd;
+}
+#fileElem {
+    display: none;
+}
+
+.loader-container{
+    display: none;
+}
+
+.modal{
+    overflow: hidden !important;
+}
+
+/* ul#chat-container{
+    transform: rotate(180deg);
+}
+
+ul#chat-container > li{
+    margin: 16px 0px !important;
+    transform: rotate(-180deg);
+} */
+
+.collection{
+    border: none;
+}
+
+
+.feature-list .collection .collection-item{
+    /* color: white; */
+    border-bottom: 0px !important;
+    height: 52px;
+}
+
+/* .collection.center .collection-item{
+    height: 56px !important;
+} */
+
+.card.collection a{
+    color: #434343;
+}
+
+.card.collection .active{
+    background-color: #448AFF;
+}
+
+.counter-flex-container{
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.counter-flex-container button{
+    margin: 0 8px !important;
+    height: 100% !important;
+    /* font-size: 22px; */
+    color: #434343
+}
+
+#loader{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main{
+    display: none;
+}

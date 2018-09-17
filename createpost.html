@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forum.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <div id="loader" class="container">
+        <div class="center">
+            <div class="preloader-wrapper medium active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <section id="main">
+        <div class="container">
+            <div class="container">
+                <h4 class="grey-text text-darken-3">Ask New Question</h4>
+                <div class="row">
+                    <form id="post-form" class="col s12 newpost" action="#">
+                        <!-- <div class="row">
+                            <div class="input-field col s12">
+                                <label for="title">Title</label>
+                                <input id="title" name="title" type="text" class="validate">
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label>Subject</label>
+                                <select id="subject">
+                                    <option value="" disabled selected>Choose your subject</option>
+                                    <option value="CCW Law New Debate">CCW Law New Debate</option>
+
+                                    <option value="CCW Law Legislation Pending">CCW Law Legislation Pending</option>
+
+                                    <option value="Reciprocity New Debate">Reciprocity New Debate</option>
+
+                                    <option value="Reciprocity Reconfiguration">Reciprocity Reconfiguration</option>
+
+                                    <option value="Correction: App Quick Facts">Correction: App Quick Facts</option>
+
+                                    <option value="Payments">Payments</option>
+
+                                    <option value="App Suggestions">App Suggestions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <!-- <i class="material-icons prefix">textsms</i> -->
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" class="autocomplete">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" type="text" class="validate"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn blue accent-2">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/firebase-creds.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let app = firebase.initializeApp(config);
+            const db = firebase.firestore();
+            const auth = firebase.auth();
+
+            var user = auth.currentUser;
+            var uid = null;
+            var email = null;
+            var display_name = null;
+
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+
+            var data = {
+                "Alabama": null,
+                "Alaska": null,
+                "American Samoa": null,
+                "Arizona": null,
+                "Arkansas": null,
+                "California": null,
+                "Colorado": null,
+                "Connecticut": null,
+                "Delaware": null,
+                "District Of Columbia": null,
+                "Federated States Of Micronesia": null,
+                "Florida": null,
+                "Georgia": null,
+                "Guam": null,
+                "Hawaii": null,
+                "Idaho": null,
+                "Illinois": null,
+                "Indiana": null,
+                "Iowa": null,
+                "Kansas": null,
+                "Kentucky": null,
+                "Louisiana": null,
+                "Maine": null,
+                "Marshall Islands": null,
+                "Maryland": null,
+                "Massachusetts": null,
+                "Michigan": null,
+                "Minnesota": null,
+                "Mississippi": null,
+                "Missouri": null,
+                "Montana": null,
+                "Nebraska": null,
+                "Nevada": null,
+                "New Hampshire": null,
+                "New Jersey": null,
+                "New Mexico": null,
+                "New York": null,
+                "North Carolina": null,
+                "North Dakota": null,
+                "Northern Mariana Islands": null,
+                "Ohio": null,
+                "Oklahoma": null,
+                "Oregon": null,
+                "Palau": null,
+                "Pennsylvania": null,
+                "Puerto Rico": null,
+                "Rhode Island": null,
+                "South Carolina": null,
+                "South Dakota": null,
+                "Tennessee": null,
+                "Texas": null,
+                "Utah": null,
+                "Vermont": null,
+                "Virgin Islands": null,
+                "Virginia": null,
+                "Washington": null,
+                "West Virginia": null,
+                "Wisconsin": null,
+                "WY": "Wyoming"
+            }
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems, { data: data });
+
+            var form = document.getElementById('post-form')
+            form.addEventListener('submit', function (e) {
+                e.preventDefault()
+                e.stopPropagation()
+
+                var subject_in = document.getElementById('subject')
+                var state_in = document.getElementById('state')
+                var message_in = document.getElementById('message')
+
+                var subject = subject_in.value
+                var state = state_in.value
+                var message = message_in.value
+
+                console.log(subject, state, message)
+
+                var postData = {
+                    user_uid: uid,
+                    name: display_name,
+                    subject: subject,
+                    state: state,
+                    message: message,
+                    created_at: new Date(),
+                    comments: 0,
+                    like: 0
+                }
+                db.collection('forum').add(postData).then(function (docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                    window.location.href = '/forum.html'
+                })
+                    .catch(function (error) {
+                        console.error("Error adding document: ", error);
+                    });
+            });
+
+            auth.onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    user = firebaseUser;
+                    email = firebaseUser.email;
+                    display_name = firebaseUser.displayName
+                    uid = firebaseUser.uid
+                    console.log(user, email, firebaseUser.displayName, firebaseUser.uid, new Date())
+                }
+            })
+
+        });
+    </script>
+
+</body>
+
+</html>

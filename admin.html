@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <div id="loader" class="container">
+        <div class="center">
+            <div class="preloader-wrapper medium active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div id="main">
+        <section>
+            <div class="navbar-fixed">
+                <nav class="white">
+                    <div class="nav-wrapper container">
+                        <a href="#" data-target="slide-out" class="sidenav-trigger grey-text" style="display: inline-block;"><i
+                                class="material-icons">menu</i></a>
+                        <a href="#" class="brand-logo blue-text accent-2 bold">Admin Dashboard</a>
+                        <ul class="right">
+                            <li><a href="#" class="grey-text text-darken-1 bold dropdown-trigger" data-target="dropdown-notification"><i
+                                        class="material-icons">notifications</i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img class="right" src="asset/ctt_small.png">
+                        </div>
+                        <a href="#name"><span class="name">Admin</span></a>
+                        <a href="#email"><span class="email">admin@carrythistoo.com</span></a>
+                    </div>
+                </li>
+                <li class="active"><a class="waves-effect" href="#"><i class="material-icons">dashboard</i>Admin Dashboard</a></li>
+                <li><a class="waves-effect" href="/forum.html"><i class="material-icons">message</i>Message Center</a></li>
+                <li><a class="waves-effect" href="/admin_chat.html"><i class="material-icons">format_quote</i>Admin Chat</a></li>
+                <li><a id="logout" class="waves-effect" href="#logout"><i class="material-icons">launch</i>Logout</a></li>
+            </ul>
+        </section>
+
+        <section class="container">
+            <div class="row">
+                <div>
+                    <h5>Users</h5>
+                    <a class="right btn blue accent-2 modal-trigger" href="#invite">ADD</a>
+                </div>
+                <div class="col l8">
+                    <ul id="detail-container" class="collapsible"></ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="invite" class="modal">
+        <div class="modal-content row">
+            <h4>Add Instructor</h4>
+            <p>Enter the Email Id of the instructor</p>
+            <input id="invite_email" type="email" name="email" placeholder="Email" class="validate col l6">
+        </div>
+        <div class="modal-footer">
+            <a id="invite_btn" href="#" class="modal-close waves-effect btn blue accent-2">Send Invite</a>
+        </div>
+    </div>
+
+    <div id="form_verification" class="modal">
+        <div class="modal-content row">
+            <h4>Form Verification</h4>
+            <p>Please choose an option below to update the form status</p>
+            <div>
+                <p>
+                    <label>
+                        <input name="group1" type="radio" checked />
+                        <span>Verified</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="group1" type="radio" checked />
+                        <span>Not Verified</span>
+                    </label>
+                </p>
+            </div>
+            <input id="note" type="text" name="note" placeholder="Please add a note" class="col l6">
+        </div>
+        <div class="modal-footer">
+            <a id="update_status" href="#" class="modal-close waves-effect btn blue accent-2">Update Status</a>
+            <!-- <a id="invite_btn" href="#" class="modal-close waves-effect btn blue accent-2">Send Invite</a> -->
+        </div>
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-functions.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/firebase-creds.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+
+</body>
+
+</html>

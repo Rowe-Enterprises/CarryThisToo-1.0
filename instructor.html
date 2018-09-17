@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link rel='stylesheet' href='node_modules/fullcalendar/dist/fullcalendar.min.css' />
+		<link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body>
+
+		<ul id='dropdown-notification' class='dropdown-content'>
+			<li><a href="#!">one</a></li>
+			<li><a href="#!">two</a></li>
+			<li class="divider" tabindex="-1"></li>
+			<li><a href="#!">three</a></li>
+			<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+			<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+		</ul>
+		<div class="main">
+			<section>
+				<div class="navbar-fixed">
+					<nav class="white">
+						<div class="nav-wrapper container">
+							<a href="#" data-target="slide-out" class="sidenav-trigger grey-text" style="display: inline-block;"><i class="material-icons">menu</i></a>
+							<a href="#" class="brand-logo blue-text accent-2 bold">Dashboard</a>
+							<ul class="right">
+								<li><a href="#" class="grey-text text-darken-1 bold dropdown-trigger" data-target="dropdown-notification"><i class="material-icons">notifications</i></a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				
+				<ul id="slide-out" class="sidenav">
+					<li><div class="user-view">
+						<div class="background">
+						<img class="right" src="asset/ctt_small.png">
+						</div>
+						<a href="#name"><span class="name">Instructor Name</span></a>
+						<a href="#email"><span class="email">someone@something.com</span></a>
+						<a href="#uid"><span class="email">D7E2X5</span></a>
+					</div></li>
+					<li class="active"><a class="waves-effect" href="#"><i class="material-icons">dashboard</i>Dashboard</a></li>
+					<li><a class="waves-effect" href="/forum.html"><i class="material-icons">message</i>Message Center</a></li>
+					<li><a class="waves-effect" href="chat.html"><i class="material-icons">format_quote</i>Admin Chat</a></li>
+					<li><a class="waves-effect" href="profile.html"><i class="material-icons">person</i>Profile</a></li>
+					<li><a id="logout" class="waves-effect" href="#logout"><i class="material-icons">launch</i>Logout</a></li>
+					<!-- <li><a id="logout" href="#" class="grey-text text-darken-1 bold">LOGOUT</a></li> -->
+				</ul>
+			</section>
+
+			<section id="dashboard" class="container">
+				<h5 class="bold uppercase">Overview</h5>
+				<div class="row">
+					<div class="col l5 offset-l1 card">
+						<div class="card-content">
+							<p class="bold">Referral Credits</p>
+							<h5 class="bold">Year: 2018</h5>
+							<h3 class="bold">$54.15</h3>
+							<!-- <canvas id="monthly_chart" width="500" height="300"></canvas> -->
+						</div>
+						<div class="card-action">
+							<a href="#revenue" class="bold blue-text accent-2">EXPLORE</a>
+						</div>
+					</div>
+					<div class="col l5 offset-l1 card">
+						<div class="card-content">
+							<p class="bold">Previous Referral Credits</p>
+							<h5 class="bold">Year: 2017</h5>
+							<h3 class="bold">$208.1</h3>
+						</div>
+						<div class="card-action">
+							<a href="#revenue" class="bold blue-text accent-2">EXPLORE</a>
+						</div>
+					</div>
+					<div class="col l5 offset-l1 card">
+						<div class="card-content">
+							<p class="bold">Previous Contribution Credit</p>
+							<h5 class="bold">Year: 2017</h5>
+							<h3 class="bold">45</h3>
+							<!-- <canvas id="monthly_chart" width="500" height="300"></canvas> -->
+						</div>
+						<div class="card-action">
+							<a href="#revenue" class="bold blue-text accent-2">EXPLORE</a>
+						</div>
+					</div>
+					<div class="col l5 offset-l1 card">
+						<div class="card-content">
+							<p class="bold">Contribution Credit</p>
+							<h5 class="bold">Year: 2018</h5>
+							<h3 class="bold">9</h3>
+						</div>
+						<div class="card-action">
+							<a href="#revenue" class="bold blue-text accent-2">EXPLORE</a>
+						</div>
+					</div>
+					<div class="col l5 offset-l1 card">
+						<div class="card-content">
+							<p class="bold">Total Earnings</p>
+							<h3 class="bold">$161</h3>
+							<canvas id="monthly_chart" width="500" height="300"></canvas>
+						</div>
+						<div class="card-action">
+							<a href="#revenue" class="bold blue-text accent-2">EXPLORE</a>
+						</div>
+					</div>
+					<div class="col l5 offset-l1 card">
+						<div class="card-content">
+							<p class="bold">Credits Earning</p>
+							<h3 class="bold">1633</h3>
+							<canvas id="myChart" width="500" height="300"></canvas>
+						</div>
+						<div class="card-action">
+							<a href="#revenue" class="bold blue-text accent-2">EXPLORE</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l5 offset-l1 card accent-2">
+						<div class="card-content">
+							<h6 class="bold">Next Payment Date: 24-09-2018</h6>
+						</div>
+					</div>
+					<!-- <div class="col l5 offset-l1 card blue accent-2">
+						<div class="card-content">
+							<h4 class="bold white-text">Upgrade your plan</h4>
+						</div>
+					</div> -->
+				</div>
+			</section>
+			<!-- 
+			<section id="revenue" class="container">
+				<div class="row">
+					<h5 class="uppercase bold">Earning</h5>
+					<div class="col l5 offset-l1"><p class="bold">Current Period Earnings</p><br><canvas id="myChart1" width="400" height="300"></canvas></div>
+					<div class="col l5 offset-l1"><p class="bold">Credits Earned Last Quarter</p><br><canvas id="myChart2" width="400" height="300"></canvas></div>
+					<div class="col l5 offset-l1"><p class="bold">Credits Earned This Quarter</p><br><canvas id="myChart3" width="400" height="300"></canvas></div>
+				</div>
+			</section>
+			<section id="statistics" class="container">
+				<div class="row">
+					<h5 class="uppercase bold">Users</h5>
+					<div class="col l5 offset-l1"><p class="bold">Daily</p><canvas id="line" width="400" height="300"></canvas></div>
+					<div class="col l5 offset-l1"><p class="bold">Weekly</p><canvas id="line1" width="400" height="300"></canvas></div>
+					<div class="col l5 offset-l1"><p class="bold">Monthly</p><canvas id="line2" width="400" height="300"></canvas></div>
+					<div class="col l5 offset-l1"><p class="bold">Yearly</p><canvas id="line3" width="400" height="300"></canvas></div>
+				</div>
+			</section> -->
+		</div>
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/firebase-creds.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/dashboard.js"></script>
+
+	</body>
+</html>
