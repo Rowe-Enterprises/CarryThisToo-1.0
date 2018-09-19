@@ -213,6 +213,10 @@
 
             auth.onAuthStateChanged(firebaseUser => {
                 if (firebaseUser) {
+
+                    document.getElementById('loader').style.display = "none"
+                    document.getElementById('main').style.display = "block"
+
                     user = firebaseUser;
                     email = firebaseUser.email;
                     display_name = firebaseUser.displayName

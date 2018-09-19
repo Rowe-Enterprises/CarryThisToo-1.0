@@ -313,14 +313,22 @@ ul#chat-container > li{
 }
 
 #register-container{
-    display: none;
-}
-
-#pricing-container{
     display: block;
 }
 
+#pricing-container{
+    display: none;
+}
+
 #add-on-container{
+    display: none;
+}
+
+#cart-container{
+    display: none;
+}
+
+#new-cart{
     display: none;
 }
 

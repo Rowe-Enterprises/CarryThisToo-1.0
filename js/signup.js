@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var id = null;
 
     cart = {}
+
+    document.getElementById('loader').style.display = "none"
+    document.getElementById('main').style.display = "block"
     
     document.getElementById('confirm_btn').addEventListener('click', function(){    
         var first_name = document.getElementById('first_name')
