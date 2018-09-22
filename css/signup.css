@@ -353,11 +353,19 @@ ul#chat-container > li{
 }
 
 #pricing-container{
-    display: block;
+    display: none;
 }
 
 #add-on-container{
     display: block;
+}
+
+#cart-container{
+    display: none;
+}
+
+#new-cart{
+    display: none;
 }
 
 #payment-container{
