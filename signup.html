@@ -47,86 +47,36 @@
 			</div> -->
 		<section class="login-signup">
 			<div id="register-container" class="container">
-				<h3>Register</h3>
-				<div class="header">
-					<h5>Business Details</h5>
-				</div>
-				<div class="body">
-					<div class="row">
-						<div class="col l8 offset-l2">
-							<div class="col l6">
-								<input id="first_name" name="first_name" type="text" class="validate" placeholder="First Name">
-							</div>
-							<div class="col l6">
-								<input id="last_name" name="last_name" type="text" class="validate" placeholder="Last Name">
-							</div>
-							<div class="col l6">
-								<input id="business_name" name="business_name" type="text" class="validate" placeholder="Business Name">
-							</div>
-							<div class="col l6">
-								<input id="email" name="email" type="email" class="validate" placeholder="Email" disabled>
-							</div>
-							<div class="col l12">
-								<input id="business_line_1" name="business_line_1" type="text" class="validate" placeholder="Business Address Line 1">
-							</div>
-							<div class="col l12">
-								<input id="business_line_2" name="business_line_2" type="text" class="validate" placeholder="Business Address Line 2">
-							</div>
-							<div class="col l6">
-								<input id="business_phone" name="business_phone" type="tel" class="validate" placeholder="Business Phone">
-							</div>
-							<div class="col l6">
-								<input id="federal_tax_ein" name="federal_tax_ein" type="text" class="validate" placeholder="Federal Tax EIN">
-							</div>
-							<div class="col l4">
-								<input id="business_city" name="business_city" type="text" class="validate" placeholder="City">
-							</div>
-							<div class="col l4">
-								<input id="business_state" name="business_state" type="text" class="validate" placeholder="State">
-							</div>
-							<div class="col l4">
-								<input id="business_zip_code" name="business_zip_code" type="text" class="validate" placeholder="Zip Code">
-							</div>
-							<div class="col l6">
-								<input id="password" name="password" type="password" class="validate" placeholder="Create Password">
-							</div>
-							<div class="col l6">
-								<input id="confirm_password" name="confirm_password" type="password" class="validate" placeholder="Confirm Password">
-							</div>
-							<div class="col l4 offset-l4">
-								<a class="btn blue accent-2" id="confirm_btn" href="#">CONFIRM</a>
-							</div>
+				<div class="card">
+					<div class="card-content">
+						<h4>Register</h4>
+						<h5>Business Details</h5>
+						<div class="row">
+							
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="pricing-container">
-				<div class="header container">
+				<div class="container row">
 					<h5>Choose a Plan</h5>
-				</div>
-				<div class="body">
-					<div class="row flex-container">
-						<!-- <h6 class="center-align">Flexible Plan</h6> -->
-						<div class="pricing-card card">
-							<div class="pricing-content center row grey lighten-4">
+					<!-- <h6 class="center-align">Flexible Plan</h6> -->
+					<div class="col l3">
+						<div class="card pricing-card">
+							<div class="card-content center grey lighten-4">
 								<h5 class="bold brown-text">BRONZE</h5>
 								<h6 id="saving" class="bold margin-bottom-0">Save 11%</h6>
-								<h2 id="bronze-price" class="bold margin-bottom-0 margin-top-0">$269.99</h2>
-								<h5 id="bronze-discount" class="bold margin-bottom-0 strikethrough">$299.84</h5>
-								<p id="period" class="margin-top-0">per year</p>
-								<div class="input-field col s12">
-									<select id="payment-option">
-										<!-- <option value="" disabled selected>Choose your option</option> -->
-										<option value="yearly">YEARLY</option>
-										<option value="monthly">MONTHLY</option>
-
-									</select>
-									<label>Payment Option</label>
-								</div>
-								<!-- <div>
-										<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
-									</div> -->
-
+								<h4 id="bronze-price" class="bold margin-bottom-0 margin-top-0">$269.99
+									</h2>
+									<h5 id="bronze-discount" class="bold margin-bottom-0 strikethrough">$299.84</h5>
+									<p id="period" class="margin-top-0">per year</p>
+									<div class="input-field margin-bottom-0 margin-top-32">
+										<select id="payment-option">
+											<option value="yearly">YEARLY</option>
+											<option value="monthly">MONTHLY</option>s
+										</select>
+										<label style="top: -32px;">Payment Option</label>
+									</div>
 							</div>
 							<div class="feature-list">
 								<ul class="collection margin-bottom-0 center">
@@ -141,25 +91,27 @@
 									<li class="collection-item bold strikethrough grey-text lighten-2">Website Design and Development</li>
 								</ul>
 							</div>
-							<div class="center">
+							<div class="center grey lighten-4 padding-16">
 								<p class="bold">Renewal</p>
-								<h3 class="bold margin-top-0">$269.99</h3>
+								<h5 class="bold margin-top-0">$269.99</h5>
 								<a id="bronze-plan" class="btn blue accent-2 col l8 offset-l2">CHOOSE PLAN</a><br><br>
 							</div>
 							<!-- <div class="a-la-carte card"></div> -->
 						</div>
-						<!-- <h6 class="center-align">Smooth Plans</h6> -->
-						<div class="card">
-							<div class="pricing-content center row grey lighten-4">
+					</div>
+					<!-- <h6 class="center-align">Smooth Plans</h6> -->
+					<div class="col l3">
+						<div class="card pricing-card">
+							<div class="card-content center grey lighten-4">
 								<h5 class="bold grey-text text-lighten-1">SILVER</h5>
 								<h6 class="bold margin-bottom-0">Save 6%</h6>
 								<!-- <h2 class="bold margin-bottom-0 margin-top-0">$529.99</h2> -->
-								<h2 class="bold margin-bottom-0">$559.97</h2>
+								<h3 class="bold margin-bottom-0">$559.97</h3>
 								<p class="margin-top-0">per year</p>
 								<!-- <div> -->
 								<!-- <a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br> -->
 								<!-- </div> -->
-								<h3 class="bold margin-bottom-0 margin-top-0">$279.99</h3>
+								<h4 class="bold margin-bottom-0 margin-top-0">$279.99</h4>
 								<p class="margin-top-0">two installments</p>
 
 							</div>
@@ -176,29 +128,31 @@
 									<li class="collection-item bold strikethrough grey-text lighten-2">Website Design and Development</li>
 								</ul>
 							</div>
-							<div class="center">
+							<div class="center grey lighten-4 padding-16">
 								<p class="bold">Renewal</p>
-								<h3 class="bold margin-top-0">$269.99</h3>
+								<h5 class="bold margin-top-0">$269.99</h5>
 								<a id="silver-plan" class="btn blue accent-2 col l8 offset-l2">CHOOSE PLAN</a><br><br>
 							</div>
 						</div>
+					</div>
 
-						<div class="card">
-							<div class="pricing-content center row grey lighten-4">
+					<div class="col l3">
+						<div class="card pricing-card">
+							<div class="card-content center grey lighten-4">
 								<h5 class="bold amber-text accent-2">GOLD</h5>
 								<h6 class="bold margin-bottom-0">Save 10%</h6>
 								<!-- <h2 class="bold margin-bottom-0 margin-top-0">$1,515.99</h2> -->
-								<h2 class="bold margin-bottom-0">$1,579.99</h2>
+								<h3 class="bold margin-bottom-0">$1,579.99</h3>
 								<p class="margin-top-0">per year</p>
 								<!-- <div>
 										<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
 									</div> -->
-								<h3 class="bold margin-bottom-0 margin-top-0">$789.99</h3>
+								<h4 class="bold margin-bottom-0 margin-top-0">$789.99</h4>
 								<p class="margin-top-0">two installments</p>
 
 							</div>
 							<div class="feature-list">
-								<ul class="collection grey center">
+								<ul class="collection grey center margin-bottom-0">
 									<li class="collection-item bold">QR Code</li>
 									<li class="collection-item bold">Marketing Poster</li>
 									<li class="collection-item bold">Marketing Flyer</li>
@@ -211,24 +165,26 @@
 									<li class="collection-item collection-item bold strikethrough grey-text lighten-2">Website Design and Development</li>
 								</ul>
 							</div>
-							<div class="center">
+							<div class="center grey lighten-4 padding-16">
 								<p class="bold">Renewal</p>
-								<h3 class="bold margin-top-0">$269.99</h3>
+								<h5 class="bold margin-top-0">$269.99</h5>
 								<a id="gold-plan" class="btn blue accent-2 col l8 offset-l2">CHOOSE PLAN</a><br><br>
 							</div>
 						</div>
+					</div>
 
-						<div class="card">
-							<div class="pricing-content center row grey lighten-4">
+					<div class="col l3">
+						<div class="card pricing-card">
+							<div class="card-content center grey lighten-4">
 								<h5 class="bold blue-grey-text lighten-2">PLATINUM</h5>
 								<h6 class="bold margin-bottom-0">Save 10%</h6>
 								<!-- <h2 class="bold margin-bottom-0 margin-top-0">$2,495.99</h2> -->
-								<h2 class="bold margin-bottom-0">$2,599.99</h2>
+								<h3 class="bold margin-bottom-0">$2,599.99</h3>
 								<p class="margin-top-0">per year</p>
 								<!-- <div>
 										<a class="btn blue accent-2 col l8 offset-l2">PAY IN FULL</a><br><br>
 									</div> -->
-								<h3 class="bold margin-bottom-0 margin-top-0">$1,299.99</h3>
+								<h4 class="bold margin-bottom-0 margin-top-0">$1,299.99</h4>
 								<p class="margin-top-0">two installments</p>
 
 							</div>
@@ -246,16 +202,14 @@
 									<li class="collection-item bold">Website Design and Development</li>
 								</ul>
 							</div>
-							<div class="center">
+							<div class="center grey lighten-4 padding-16">
 								<p class="bold">Renewal</p>
-								<h3 class="bold margin-top-0">$269.99</h3>
+								<h5 class="bold margin-top-0">$269.99</h5>
 								<a id="platinum-plan" class="btn blue accent-2 col l8 offset-l2">CHOOSE PLAN</a><br><br>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row center">
-					<button id="a-le-carte" class="btn blue accent-2 btn-large">GO TO A LE'CARTE</button>
+					<button id="a-le-carte" class="btn blue accent-2 right margin-16">GO TO A LE'CARTE</button>
 				</div>
 			</div>
 			<div id="add-on-container">
@@ -415,19 +369,217 @@
 				</div>
 			</div>
 			<div id="" class="container row">
-				<div class="card">
-					<div class="card-content">
-						<div id="" class="row">
-							<p class="bold col l6">Marketing Poster</p>
-							<div class="col l2">
-								<div class="counter-flex-container valign-wrapper">
-									<button class="btn grey lighten-2">+</button>
-									<input id="" type="number" max="1000" min="1" step="1" value="0" placeholder="Quantity">
-									<button class="btn grey lighten-2">-</button>
-								</div>
-							</div>
-							<p class="col l2">$46.99</p>
+				<div class="col l12">
+					<div class="card">
+						<div class="card-content">
+							<h5>A Le'Carte</h5>
 						</div>
+						<ul class="collection">
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Marketing Poster</h6>
+										<p class="red-text">* You can only select at max 5 unit.</p>
+									</div>
+									<div class="col l3">
+										<div class="counter-flex-container">
+											<button class="btn grey lighten-2">+</button>
+											<input id="" type="number" max="1000" min="1" step="1" value="0" placeholder="Quantity">
+											<button class="btn grey lighten-2">-</button>
+										</div>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold">$46.99</h5>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Marketing Poster</h6>
+										<p class="red-text">* You can only select at max 5 unit.</p>
+									</div>
+									<div class="col l3">
+										<div class="counter-flex-container">
+											<button class="btn grey lighten-2">+</button>
+											<input id="" type="number" max="1000" min="1" step="1" value="0" placeholder="Quantity">
+											<button class="btn grey lighten-2">-</button>
+										</div>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold">$26.99</h5>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Marketing Poster</h6>
+										<p class="red-text">* You can only select at max 5 unit.</p>
+									</div>
+									<div class="col l3">
+										<div class="counter-flex-container">
+											<button class="btn grey lighten-2">+</button>
+											<input id="" type="number" max="1000" min="1" step="1" value="0" placeholder="Quantity">
+											<button class="btn grey lighten-2">-</button>
+										</div>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold">$35.99</h5>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l8">
+										<h6 class="bold margin-0">QR Code</h6>
+										<p>USB Replacement</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$35.99</h5>
+										<p>Save 6%</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Carry This Too™ Badge</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$441.99</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$220.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Content Modifications</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$431.97</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$215.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Design Modifications</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$1,041.98</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$520.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Scheduling Calendar Tool</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$531.99</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$265.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Text Message Notifications</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$531.99</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$265.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Payment Gateway API Integration</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$531.99</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$265.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+							<li class="collection-item">
+								<div id="" class="row margin-0 padding-16 valign-wrapper">
+									<div class="col l5">
+										<h6 class="bold margin-0">Website Design and Development</h6>
+									</div>
+									<div class="col l3 center">
+										<h5 class="bold margin-0">$1,211.99</h5>
+										<p>per year</p>
+									</div>
+									<div class="col l2 center">
+										<h5 class="bold margin-0">$605.99</h5>
+										<p>two installments</p>
+									</div>
+									<div class="col l2 center">
+										<a class="btn blue accent-2">ADD TO CART</a>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -445,11 +597,17 @@
 					</div>
 				</div>
 			</div>
-			<div id="payment-container">
-				<div class="header container">
-					<h5>Choose your Payment Method</h5>
+			<div id="payment-container" class="container row">
+				<div class="col l12">
+					<div class="card">
+						<div class="card-content">
+							<form id="checkout" method="post" action="/checkout">
+								<div id="payment-form"></div>
+								<input class="btn blue accent-2" type="submit" value="Pay $10">
+							</form>
+						</div>
+					</div>
 				</div>
-				<div class="body container"></div>
 			</div>
 		</section>
 	</div>
@@ -462,11 +620,12 @@
 	<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script type="text/javascript" src="js/firebase-creds.js"></script>
+	<script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
 	<script type="text/javascript" src="js/signup.js"></script>
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			var select = document.getElementById('payment-option');
+			var select = document.querySelectorAll('select');
 			var instances = M.FormSelect.init(select, {});
 
 			var wrapper = document.querySelector('.select-wrapper');
@@ -477,7 +636,7 @@
 			var discount = document.getElementById('bronze-discount');
 			var period = document.getElementById('period');
 
-			select.addEventListener('change', function () {
+			select[0].addEventListener('change', function () {
 				console.log(select.value);
 				if (select.value === "yearly") {
 					price.innerHTML = "$269.99";
@@ -493,7 +652,39 @@
 				}
 			});
 
+			// fetch('http://13.232.20.146/ctt/public/api/clienttokenweb')
+			// 	.then(
+			// 		function (response) {
+			// 			if (response.status !== 200) {
+			// 				console.log('Looks like there was a problem. Status Code: ' +
+			// 					response.status);
+			// 				return;
+			// 			}
 
+			// 			// Examine the text in the response
+			// 			response.json().then(function (data) {
+			// 				console.log(data);
+			// 			});
+			// 		}
+			// 	)
+			// 	.catch(function (err) {
+			// 		console.log('Fetch Error :-S', err);
+			// 	});
+
+			// var ajax = new XMLHttpRequest()
+			// ajax.onreadystatechange = function () {
+			// 	if (this.readyState == 4 && this.status == 200) {
+			// 		console.log(this.responseText)
+			// 	}
+			// }
+			// ajax.open('GET', 'http://13.232.20.146/ctt/public/api/clienttokenweb', true)
+			// ajax.send()
+
+			// var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiI4NjQ1MzM0OTJmNGYzMTAyYWE3Y2IxMzIzZmRkYzI2YzYyZTg2YzgzMWVkNDU1ZGZlMDVkMmUwZGJkZjBmNTIyfGNyZWF0ZWRfYXQ9MjAxOC0wOS0yMVQxNDoxNjowNC4xNTk4MTE4NzMrMDAwMFx1MDAyNm1lcmNoYW50X2lkPWZrNGNxZmdmaGdzcTd3NHhcdTAwMjZwdWJsaWNfa2V5PXEyamt4dzZ4ZzRua3Zzdm0iLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZms0Y3FmZ2ZoZ3NxN3c0eC9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJncmFwaFFMIjp7InVybCI6Imh0dHBzOi8vcGF5bWVudHMuc2FuZGJveC5icmFpbnRyZWUtYXBpLmNvbS9ncmFwaHFsIiwiZGF0ZSI6IjIwMTgtMDUtMDgifSwiY2hhbGxlbmdlcyI6W10sImVudmlyb25tZW50Ijoic2FuZGJveCIsImNsaWVudEFwaVVybCI6Imh0dHBzOi8vYXBpLnNhbmRib3guYnJhaW50cmVlZ2F0ZXdheS5jb206NDQzL21lcmNoYW50cy9mazRjcWZnZmhnc3E3dzR4L2NsaWVudF9hcGkiLCJhc3NldHNVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbSIsImF1dGhVcmwiOiJodHRwczovL2F1dGgudmVubW8uc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbSIsImFuYWx5dGljcyI6eyJ1cmwiOiJodHRwczovL29yaWdpbi1hbmFseXRpY3Mtc2FuZC5zYW5kYm94LmJyYWludHJlZS1hcGkuY29tL2ZrNGNxZmdmaGdzcTd3NHgifSwidGhyZWVEU2VjdXJlRW5hYmxlZCI6dHJ1ZSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQ2FycnkgVGhpcyBUb28sIExMQyIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImNhcnJ5dGhpc3Rvb2xsYyIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJtZXJjaGFudElkIjoiZms0Y3FmZ2ZoZ3NxN3c0eCIsInZlbm1vIjoib2ZmIn0="
+
+			// braintree.setup(clientToken, "dropin", {
+			// 	container: "payment-form"
+			// });
 
 		});
 	</script>

@@ -89,8 +89,20 @@ textarea::-webkit-scrollbar-thumb{
     padding: 16px !important;
 }
 
+.margin-16{
+    margin: 16px !important;
+}
+
 .padding-0{
     padding: 0px !important;
+}
+
+.padding-left-32{
+    padding-left: 32px !important;
+}
+
+.padding-right-32{
+    padding-right: 32px !important;
 }
 
 .margin-0{
@@ -103,6 +115,22 @@ textarea::-webkit-scrollbar-thumb{
 
 .margin-top-0{
     margin-top: 0px !important;
+}
+
+.margin-bottom-16{
+    margin-bottom: 16px !important;
+}
+
+.margin-top-16{
+    margin-top: 16px !important;
+}
+
+.margin-bottom-32{
+    margin-bottom: 32px !important;
+}
+
+.margin-top-32{
+    margin-top: 32px !important;
 }
 
 .margin-right-8{
@@ -291,6 +319,14 @@ ul#chat-container > li{
     height: 56px !important;
 } */
 
+.input-field .select-wrapper input{
+    margin-bottom: 0px !important;
+}
+
+.pricing-card .card-content{
+    height: 300px !important;
+}
+
 .card.collection a{
     color: #434343;
 }
@@ -301,7 +337,7 @@ ul#chat-container > li{
 
 .counter-flex-container{
     display: flex;
-    vertical-align: middle;
+    align-items: center;
     justify-content: center;
 }
 
@@ -313,7 +349,7 @@ ul#chat-container > li{
 }
 
 #register-container{
-    display: none;
+    display: block;
 }
 
 #pricing-container{
@@ -321,9 +357,39 @@ ul#chat-container > li{
 }
 
 #add-on-container{
-    display: none;
+    display: block;
 }
 
 #payment-container{
+    display: block;
+}
+
+ul.stepper .step.active:before, ul.stepper .step.done:before{
+    background-color: #448AFF !important;
+}
+
+ul.stepper{
+    height: 100vh;
+    margin: 0;
+}
+
+ul.stepper::before{
+    z-index: 1;
+}
+
+.step-actions{
+    position: fixed !important;
+}
+
+#loader{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main{
     display: none;
 }

@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link rel='stylesheet' href='node_modules/fullcalendar/dist/fullcalendar.min.css' />
     <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/forum.css" media="screen,projection" />
 
@@ -65,7 +64,8 @@
                 </li>
                 <li><a class="waves-effect" href="/instructor.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
                 <li class="active"><a class="waves-effect" href="/forum.html"><i class="material-icons">message</i>Message
-                        Center</a></li>
+                        Center
+                    </a></li>
                 <li><a class="waves-effect" href="chat.html"><i class="material-icons">format_quote</i>Admin Chat</a></li>
                 <li><a class="waves-effect" href="profile.html"><i class="material-icons">person</i>Profile</a></li>
                 <li><a id="logout" class="waves-effect" href="#logout"><i class="material-icons">launch</i>Logout</a></li>
@@ -73,45 +73,15 @@
             </ul>
         </section>
 
-        <div>
-            <div class="container">
-                <div id="post-container" class="container row">
-                    <!-- <i class="material-icons">more_vert</i> -->
-                </div>
-
-                <ul class="pagination center">
-                    <li class="disabled">
-                        <!-- <a href="#" class="dropdown-trigger" data-target='option'>
-                        <i class="material-icons">chevron_left</i>
-                    </a> -->
-                    </li>
-                    <li class="active">
-                        <a href="#!">1</a>
-                    </li>
-                    <li class="waves-effect">
-                        <a href="#!">2</a>
-                    </li>
-                    <li class="waves-effect">
-                        <a href="#!">3</a>
-                    </li>
-                    <li class="waves-effect">
-                        <a href="#!">4</a>
-                    </li>
-                    <li class="waves-effect">
-                        <a href="#!">5</a>
-                    </li>
-                    <li class="waves-effect">
-                        <a href="#!">
-                            <i class="material-icons">chevron_right</i>
-                        </a>
-                    </li>
-                </ul>
-
-                <a class="btn-floating btn-large waves-effect waves-light red right" href="createpost.html">
-                    <i class="material-icons">add</i>
-                </a>
-
+        <div class="container">
+            <div id="post-container" class="container row">
+                <!-- <i class="material-icons">more_vert</i> -->
             </div>
+        </div>
+
+        <a id="create_post" class="btn-floating btn-large waves-effect waves-light red" href="createpost.html">
+            <i class="material-icons">add</i>
+        </a>
     </section>
 
     <ul id='dropdown1' class='dropdown-content'>
@@ -130,7 +100,6 @@
     <script type="text/javascript" src="js/firebase-creds.js"></script>
     <script type="text/javascript" src="js/forum.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-
 </body>
 
 </html>

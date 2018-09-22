@@ -174,3 +174,135 @@
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2018-09-21T03:47:43.157Z] ----------------------------------------------------------------------
+[debug] [2018-09-21T03:47:43.178Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Danish Shah\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-09-21T03:47:43.178Z] CLI Version:   4.0.2
+[debug] [2018-09-21T03:47:43.178Z] Platform:      win32
+[debug] [2018-09-21T03:47:43.178Z] Node Version:  v10.9.0
+[debug] [2018-09-21T03:47:43.273Z] Time:          Fri Sep 21 2018 09:17:43 GMT+0530 (India Standard Time)
+[debug] [2018-09-21T03:47:43.273Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-21T03:47:43.391Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-21T03:47:43.392Z] > authorizing via signed-in user
+[debug] [2018-09-21T03:47:43.396Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-21T03:47:43.396Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/D_YVCdWk-gR49rOcmF0hxWZiFi3JgsPrMC14cBItUP0',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Sep 21 2018 09:17:43 GMT+0530 (India Standard Time)
+[debug] [2018-09-21T03:47:44.214Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-21T03:47:44.299Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/carry-this-too-1  
+  
+ Fri Sep 21 2018 09:17:44 GMT+0530 (India Standard Time)
+[debug] [2018-09-21T03:47:45.812Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-21T03:47:45.813Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/carry-this-too-1/tokens  
+  
+ Fri Sep 21 2018 09:17:45 GMT+0530 (India Standard Time)
+[debug] [2018-09-21T03:47:46.939Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-21T03:47:46.940Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/carry-this-too-1  
+  
+ Fri Sep 21 2018 09:17:46 GMT+0530 (India Standard Time)
+[debug] [2018-09-21T03:47:48.783Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Project\Web\CarryThisTooAdmin'...
+[info] 
+[warn] !  functions: Cannot start emulator. Error: Cannot find module '@google-cloud/functions-emulator/src/config'
+[debug] [2018-09-21T03:47:48.984Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/534635995761/clients/_:getWebAppConfig  
+  
+ Fri Sep 21 2018 09:17:48 GMT+0530 (India Standard Time)
+[debug] [2018-09-21T03:47:49.705Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-09-22T11:52:51.342Z] ----------------------------------------------------------------------
+[debug] [2018-09-22T11:52:51.344Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Danish Shah\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-09-22T11:52:51.345Z] CLI Version:   4.0.2
+[debug] [2018-09-22T11:52:51.345Z] Platform:      win32
+[debug] [2018-09-22T11:52:51.345Z] Node Version:  v10.9.0
+[debug] [2018-09-22T11:52:51.346Z] Time:          Sat Sep 22 2018 17:22:51 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T11:52:51.346Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-22T11:52:51.447Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-22T11:52:51.448Z] > authorizing via signed-in user
+[debug] [2018-09-22T11:52:51.450Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-22T11:52:51.450Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/D_YVCdWk-gR49rOcmF0hxWZiFi3JgsPrMC14cBItUP0',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 22 2018 17:22:51 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T11:52:52.619Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-22T11:52:52.720Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/carry-this-too-1  
+  
+ Sat Sep 22 2018 17:22:52 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T11:52:54.280Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-22T11:52:54.281Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/carry-this-too-1/tokens  
+  
+ Sat Sep 22 2018 17:22:54 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T11:52:59.405Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-22T11:52:59.406Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/carry-this-too-1  
+  
+ Sat Sep 22 2018 17:22:59 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T11:53:01.330Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Project\Web\CarryThisTooAdmin'...
+[info] 
+[warn] !  functions: Cannot start emulator. Error: Cannot find module '@google-cloud/functions-emulator/src/config'
+[debug] [2018-09-22T11:53:01.464Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/534635995761/clients/_:getWebAppConfig  
+  
+ Sat Sep 22 2018 17:23:01 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T11:53:02.237Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-09-22T14:29:22.036Z] ----------------------------------------------------------------------
+[debug] [2018-09-22T14:29:22.112Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Danish Shah\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-09-22T14:29:22.112Z] CLI Version:   4.0.2
+[debug] [2018-09-22T14:29:22.112Z] Platform:      win32
+[debug] [2018-09-22T14:29:22.112Z] Node Version:  v10.9.0
+[debug] [2018-09-22T14:29:22.216Z] Time:          Sat Sep 22 2018 19:59:22 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T14:29:22.217Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-22T14:29:22.494Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-22T14:29:22.498Z] > authorizing via signed-in user
+[debug] [2018-09-22T14:29:22.510Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-22T14:29:22.512Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/D_YVCdWk-gR49rOcmF0hxWZiFi3JgsPrMC14cBItUP0',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 22 2018 19:59:22 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T14:29:24.614Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-22T14:29:24.928Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/carry-this-too-1  
+  
+ Sat Sep 22 2018 19:59:24 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T14:29:26.336Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-22T14:29:26.337Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/carry-this-too-1/tokens  
+  
+ Sat Sep 22 2018 19:59:26 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T14:29:27.361Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-22T14:29:27.363Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/carry-this-too-1  
+  
+ Sat Sep 22 2018 19:59:27 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T14:29:29.205Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Project\Web\CarryThisTooAdmin'...
+[info] 
+[warn] !  functions: Cannot start emulator. Error: Cannot find module '@google-cloud/functions-emulator/src/config'
+[debug] [2018-09-22T14:29:29.669Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/534635995761/clients/_:getWebAppConfig  
+  
+ Sat Sep 22 2018 19:59:29 GMT+0530 (India Standard Time)
+[debug] [2018-09-22T14:29:30.496Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
