@@ -5,96 +5,405 @@ var user = auth.currentUser;
 var email_id = null;
 var id = null;
 
+var cart_item = {}
 cart_list = new Array()
 
-document.addEventListener('DOMContentLoaded', function() {
+let plan = {
+    bronze: {
+        name: 'Bronze Plan',
+        price: [
+            {
+                period: 'Monthly',
+                amount: '24.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '269.99'
+            }
+        ],
+        renewal: [
+            {
+                period: 'Monthly',
+                amount: '18.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '207.99'
+            }
+        ],
+        items: [
+            {
+                name: "USB with QR Code",
+                quantity: 1,
+                amount: '79.99'
+            },
+            {
+                name: "Marketing Poster",
+                quantity: 1,
+                amount: '46.99'
+            },
+            {
+                name: "Marketing Flyer",
+                quantity: 2,
+                amount: '26.99'
+            },
+            {
+                name: "Marketing Window Decals",
+                quantity: 2,
+                amount: '35.99'
+            }
+        ]
+    },
+    silver: {
+        name: 'Silver Plan',
+        price: [
+            {
+                period: 'Half Yearly',
+                amount: '279.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '559.97'
+            }
+        ],
+        renewal: [
+            {
+                period: 'Monthly',
+                amount: '18.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '207.99'
+            }
+        ],
+        items: [
+            {
+                name: "USB with QR Code",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '79.99'
+                    }
+                ]
+            },
+            {
+                name: "Marketing Poster",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '46.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Marketing Flyer",
+                quantity: 2,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '26.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Marketing Window Decals",
+                quantity: 2,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '35.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Carry This Too™ Badge Web Publication",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '220.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '441.99'
+                    }
+                ]
+            }
+        ]
+    },
+    gold: {
+        name: 'Gold Plan',
+        price: [
+            {
+                period: 'Half Yearly',
+                amount: '789.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '1,579.99'
+            }
+        ],
+        renewal: [
+            {
+                period: 'Half Yearly',
+                amount: '301.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '789.99'
+            }
+        ],
+        items: [
+            {
+                name: "USB with QR Code",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '79.99'
+                    }
+                ]
+            },
+            {
+                name: "Marketing Poster",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '46.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Marketing Flyer",
+                quantity: 2,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '26.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Marketing Window Decals",
+                quantity: 2,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '35.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Carry This Too™ Badge Web Publication",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '220.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '441.99'
+                    }
+                ]
+            },
+            {
+                name: "Text Message Service Integration",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '265.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '531.99'
+                    }
+                ]
+            },
+            {
+                name: "Calendar Schedule Integration",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '265.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '531.99'
+                    }
+                ]
+            },
+            {
+                name: "Payment Processor Integration",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '265.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '531.99'
+                    }
+                ]
+            }
+        ]
+    },
+    platinum: {
+        name: 'Platinum Plan',
+        price: [
+            {
+                period: 'Half Yearly',
+                amount: '1,299.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '2,599.99'
+            }
+        ],
+        renewal: [
+            {
+                period: 'Half Yearly',
+                amount: '301.99'
+            },
+            {
+                period: 'Yearly',
+                amount: '789.99'
+            }
+        ],
+        items: [
+            {
+                name: "USB with QR Code",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '79.99'
+                    }
+                ]
+            },
+            {
+                name: "Marketing Poster",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '46.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Marketing Flyer",
+                quantity: 2,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '26.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Marketing Window Decals",
+                quantity: 2,
+                price: [
+                    {
+                        period: 'One Time',
+                        amount: '35.99'
+                    }
+                ]
+
+            },
+            {
+                name: "Carry This Too™ Badge Web Publication",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '220.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '441.99'
+                    }
+                ]
+            },
+            {
+                name: "Text Message Service Integration",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '265.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '531.99'
+                    }
+                ]
+            },
+            {
+                name: "Calendar Schedule Integration",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '265.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '531.99'
+                    }
+                ]
+            },
+            {
+                name: "Payment Processor Integration",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '265.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '531.99'
+                    }
+                ]
+            },
+            {
+                name: "Website Design and Development",
+                quantity: 1,
+                price: [
+                    {
+                        period: 'Half Yearly',
+                        amount: '605.99'
+                    },
+                    {
+                        period: 'Yearly',
+                        amount: '1,211.99'
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('loader').style.display = "none"
     document.getElementById('main').style.display = "block"
-    
-    document.getElementById('confirm_btn').addEventListener('click', function(){    
-        var first_name = document.getElementById('first_name')
-        var last_name = document.getElementById('last_name')
-        var business_name = document.getElementById('business_name')
-        var email = document.getElementById('email')
-        var business_line_1 = document.getElementById('business_line_1')
-        var business_line_2 = document.getElementById('business_line_2')
-        var business_phone = document.getElementById('business_phone')
-        var federal_tax_ein = document.getElementById('federal_tax_ein')
-        var business_city = document.getElementById('business_city')
-        var business_state = document.getElementById('business_state')
-        var business_zip_code = document.getElementById('business_zip_code')
-        var password = document.getElementById('password')
-        var confirm_password = document.getElementById('confirm_password')
-        profileData = {};
-        userData = {};
-        if(password.value == confirm_password.value){
-            var password_val = password.value;
-            console.log(password_val);
-
-            user.updatePassword(password_val).then(function() {
-                // Update successful.
-                console.log('pass updated');
-            }).catch(function(error) {
-                // An error happened.
-                console.log('pass update failed');
-            });
-
-            profileData.displayName = first_name.value + " " + last_name.value;
-            profileData.emailVerified = true;
-            profileData.phoneNumber = business_phone;
-
-            user.updateProfile(profileData).then(function() {
-                // Update successful.
-                console.log('profile updated');
-            }).catch(function(error) {
-                // An error happened.
-                console.log('profile update failed');
-            });
-
-            userData['uid'] = user.uid
-            userData['first_name'] = first_name.value
-            userData['last_name'] = last_name.value
-            userData['business_name'] = business_name.value
-            userData['email'] = email.value
-            userData['business_line_1'] = business_line_1.value
-            userData['business_line_2'] = business_line_2.value
-            userData['business_phone'] = business_phone.value
-            userData['federal_tax_ein'] = federal_tax_ein.value
-            userData['business_city'] = business_city.value
-            userData['business_state'] = business_state.value
-            userData['business_zip_code'] = business_zip_code.value
-            userData['updated'] = true
-            userData['temp_pass'] = null
-
-            console.log(userData)
-            
-            db.collection('users').where('email', '==', email_id).get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                    // doc.data() is never undefined for query doc snapshots
-                    id = doc.id;
-                    console.log(doc.id, " => ", doc.data());
-                    var userRef = db.collection('users').doc(id);
-                    // console.log();
-                    userRef.update(userData).then(function() {
-                        console.log("Document successfully updated!");
-                        // window.location.href = 'instructor.html';
-                        document.getElementById('register-container').style.display = 'none'
-                        document.getElementById('pricing-container').style.display = 'block'
-                    })
-                    .catch(function(error) {
-                        // The document probably doesn't exist.
-                        console.error("Error updating document: ", error);
-                    });
-                });
-            })
-            .catch(function(error) {
-                console.log("Error getting documents: ", error);
-            });
-
-            // console.log(id);
-        }
-    });
 
     var bronze = document.getElementById('bronze-plan')
     var silver = document.getElementById('silver-plan')
@@ -125,16 +434,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var payment_gateway_item_name = document.getElementById('payment-gateway-item-name').innerText
     var web_dev_design_item_name = document.getElementById('web-dev-design-item-name').innerText
 
-    var marketing_poster_amount = document.getElementById('marketing-poster-amount').innerHTML 
-    var marketing_flyer_amount = document.getElementById('marketing-flyer-amount').innerHTML 
-    var marketing_window_decals_amount = document.getElementById('marketing-window-decals-amount').innerHTML 
-    var qr_code_amount = document.getElementById('qr-code-amount').innerHTML 
-    var ctt_badge_amount = document.getElementById('ctt-badge-amount').innerHTML 
-    var content_modification_amount = document.getElementById('content-modification-amount').innerHTML 
-    var design_modification_amount = document.getElementById('design-modification-amount').innerHTML 
-    var calendar_amount = document.getElementById('calendar-amount').innerHTML 
-    var text_messaging_amount = document.getElementById('text-messaging-amount').innerHTML 
-    var payment_gateway_amount = document.getElementById('payment-gateway-amount').innerHTML 
+    var marketing_poster_amount = document.getElementById('marketing-poster-amount').innerHTML
+    var marketing_flyer_amount = document.getElementById('marketing-flyer-amount').innerHTML
+    var marketing_window_decals_amount = document.getElementById('marketing-window-decals-amount').innerHTML
+    var qr_code_amount = document.getElementById('qr-code-amount').innerHTML
+    var ctt_badge_amount = document.getElementById('ctt-badge-amount').innerHTML
+    var content_modification_amount = document.getElementById('content-modification-amount').innerHTML
+    var design_modification_amount = document.getElementById('design-modification-amount').innerHTML
+    var calendar_amount = document.getElementById('calendar-amount').innerHTML
+    var text_messaging_amount = document.getElementById('text-messaging-amount').innerHTML
+    var payment_gateway_amount = document.getElementById('payment-gateway-amount').innerHTML
     var web_dev_design_amount = document.getElementById('web-dev-design-amount').innerHTML
 
     var ctt_badge_total_amount = document.getElementById('ctt-badge-total-amount').innerHTML
@@ -145,25 +454,25 @@ document.addEventListener('DOMContentLoaded', function() {
     var payment_gateway_total_amount = document.getElementById('payment-gateway-total-amount').innerHTML
     var web_dev_design_total_amount = document.getElementById('web-dev-design-total-amount').innerHTML
 
-    var marketing_poster = document.getElementById('add-marketing-poster') 
-    var marketing_flyer = document.getElementById('add-marketing-flyer') 
-    var marketing_window_decals = document.getElementById('add-marketing-window-decals') 
-    var qr_code = document.getElementById('add-qr-code') 
-    var ctt_badge = document.getElementById('add-ctt-badge') 
-    var content_modification = document.getElementById('add-content-modification') 
-    var design_modification = document.getElementById('add-design-modification') 
-    var calendar = document.getElementById('add-calendar') 
-    var text_messaging = document.getElementById('add-text-messaging') 
-    var payment_gateway = document.getElementById('add-payment-gateway') 
+    var marketing_poster = document.getElementById('add-marketing-poster')
+    var marketing_flyer = document.getElementById('add-marketing-flyer')
+    var marketing_window_decals = document.getElementById('add-marketing-window-decals')
+    var qr_code = document.getElementById('add-qr-code')
+    var ctt_badge = document.getElementById('add-ctt-badge')
+    var content_modification = document.getElementById('add-content-modification')
+    var design_modification = document.getElementById('add-design-modification')
+    var calendar = document.getElementById('add-calendar')
+    var text_messaging = document.getElementById('add-text-messaging')
+    var payment_gateway = document.getElementById('add-payment-gateway')
     var web_dev_design = document.getElementById('add-web-dev-design')
 
     var marketing_poster_quantity = document.getElementById('marketing-poster-no')
     var marketing_flyer_quantity = document.getElementById('marketing-flyer-no')
     var marketing_window_decals_quantity = document.getElementById('marketing-window-decals-no')
 
-    marketing_poster.addEventListener('click', function(){
+    marketing_poster.addEventListener('click', function () {
         console.log(itemExist(marketing_poster_id))
-        if(!itemExist(marketing_poster_id)){
+        if (!itemExist(marketing_poster_id)) {
             cart_item = {}
             cart_item['id'] = marketing_poster_id
             cart_item['name'] = marketing_poster_item_name
@@ -172,26 +481,24 @@ document.addEventListener('DOMContentLoaded', function() {
             cart_list.push(cart_item)
             document.getElementById('del-' + marketing_poster_id).style.display = 'block'
             this.style.display = 'none'
-            // console.log(cart_list)
         }
     });
 
-    marketing_flyer.addEventListener('click', function(){
-        if(!itemExist(marketing_flyer_id)){
+    marketing_flyer.addEventListener('click', function () {
+        if (!itemExist(marketing_flyer_id)) {
             cart_item = {}
             cart_item['id'] = marketing_flyer_id
             cart_item['name'] = marketing_flyer_item_name
             cart_item['amount'] = marketing_flyer_amount
             cart_item['quantity'] = marketing_flyer_quantity.value
             cart_list.push(cart_item)
-            // console.log(cart_list)
             document.getElementById('del-' + marketing_flyer_id).style.display = 'block'
             this.style.display = 'none'
         }
     });
 
-    marketing_window_decals.addEventListener('click', function(){
-        if(!itemExist(marketing_window_decals_id)){
+    marketing_window_decals.addEventListener('click', function () {
+        if (!itemExist(marketing_window_decals_id)) {
             cart_item = {}
             cart_item['id'] = marketing_window_decals_id
             cart_item['name'] = marketing_window_decals_item_name
@@ -204,8 +511,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    qr_code.addEventListener('click', function(){
-        if(!itemExist(qr_code_id)){
+    qr_code.addEventListener('click', function () {
+        if (!itemExist(qr_code_id)) {
             cart_item = {}
             cart_item['id'] = qr_code_id
             cart_item['name'] = qr_code_item_name
@@ -216,8 +523,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    ctt_badge.addEventListener('click', function(){
-        if(!itemExist(ctt_badge_id)){
+    ctt_badge.addEventListener('click', function () {
+        if (!itemExist(ctt_badge_id)) {
             cart_item = {}
             cart_item['id'] = ctt_badge_id
             cart_item['name'] = ctt_badge_item_name
@@ -229,8 +536,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    content_modification.addEventListener('click', function(){
-        if(!itemExist(content_modification_id)){
+    content_modification.addEventListener('click', function () {
+        if (!itemExist(content_modification_id)) {
             cart_item = {}
             cart_item['id'] = content_modification_id
             cart_item['name'] = content_modification_item_name
@@ -242,8 +549,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    design_modification.addEventListener('click', function(){
-        if(!itemExist(design_modification_id)){
+    design_modification.addEventListener('click', function () {
+        if (!itemExist(design_modification_id)) {
             cart_item = {}
             cart_item['id'] = design_modification_id
             cart_item['name'] = design_modification_item_name
@@ -255,8 +562,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    calendar.addEventListener('click', function(){
-        if(!itemExist(calendar_id)){
+    calendar.addEventListener('click', function () {
+        if (!itemExist(calendar_id)) {
             cart_item = {}
             cart_item['id'] = calendar_id
             cart_item['name'] = calendar_item_name
@@ -268,8 +575,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    text_messaging.addEventListener('click', function(){
-        if(!itemExist(text_messaging_id)){
+    text_messaging.addEventListener('click', function () {
+        if (!itemExist(text_messaging_id)) {
             cart_item = {}
             cart_item['id'] = text_messaging_id
             cart_item['name'] = text_messaging_item_name
@@ -281,8 +588,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    payment_gateway.addEventListener('click', function(){
-        if(!itemExist(payment_gateway_id)){
+    payment_gateway.addEventListener('click', function () {
+        if (!itemExist(payment_gateway_id)) {
             cart_item = {}
             cart_item['id'] = payment_gateway_id
             cart_item['name'] = payment_gateway_item_name
@@ -294,8 +601,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    web_dev_design.addEventListener('click', function(){
-        if(!itemExist(web_dev_design_id)){
+    web_dev_design.addEventListener('click', function () {
+        if (!itemExist(web_dev_design_id)) {
             cart_item = {}
             cart_item['id'] = web_dev_design_id
             cart_item['name'] = web_dev_design_item_name
@@ -307,16 +614,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    bronze.addEventListener('click', function(){
-        if(!itemExist('bronze-plan')){
+    bronze.addEventListener('click', function () {
+        if (!itemExist('bronze-plan')) {
             cart_item = {}
-            cart_item['id'] = 'bronze-plan'
-            cart_item['plan_name'] = "bronze"
+            cart_item['plan'] = plan['bronze']
             cart_item['payment_period'] = document.getElementById('payment-option').value
-            cart_item['price'] = ""
             cart_list.push(cart_item)
 
-            M.toast({html: 'Plan Added to Cart'})
+            M.toast({ html: 'Plan Added to Cart' })
             bronze.classList.add('disabled')
             silver.classList.remove('disabled')
             gold.classList.remove('disabled')
@@ -328,16 +633,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
-    silver.addEventListener('click', function(){
-        if(!itemExist('silver-plan')){
+    silver.addEventListener('click', function () {
+        if (!itemExist('silver-plan')) {
             cart_item = {}
-            cart_item['id'] = 'silver-plan'
-            cart_item['plan_name'] = "silver"
-            cart_item['payment_period'] = document.getElementById('payment-option').value
-            cart_item['price'] = ""
+            cart_item['plan'] = plan['silver']
             cart_list.push(cart_item)
 
-            M.toast({html: 'Plan Added to Cart'})
+            M.toast({ html: 'Plan Added to Cart' })
             bronze.classList.remove('disabled')
             silver.classList.add('disabled')
             gold.classList.remove('disabled')
@@ -349,16 +651,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
-    gold.addEventListener('click', function(){
-        if(!itemExist('gold-plan')){
+    gold.addEventListener('click', function () {
+        if (!itemExist('gold-plan')) {
             cart_item = {}
-            cart_item['id'] = 'gold-plan'
-            cart_item['plan_name'] = "gold"
-            cart_item['payment_period'] = document.getElementById('payment-option').value
-            cart_item['price'] = ""
+            cart_item['plan'] = plan['gold']
             cart_list.push(cart_item)
 
-            M.toast({html: 'Plan Added to Cart'})
+            M.toast({ html: 'Plan Added to Cart' })
             bronze.classList.remove('disabled')
             silver.classList.remove('disabled')
             gold.classList.add('disabled')
@@ -370,16 +669,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
-    platinum.addEventListener('click', function(){
-        if(!itemExist('platinum-plan')){
+    platinum.addEventListener('click', function () {
+        if (!itemExist('platinum-plan')) {
             cart_item = {}
-            cart_item['id'] = 'platinum-plan'
-            cart_item['plan_name'] = "platinum"
-            cart_item['payment_period'] = document.getElementById('payment-option').value
-            cart_item['price'] = ""
+            cart_item['plan'] = plan['platinum']
             cart_list.push(cart_item)
 
-            M.toast({html: 'Plan Added to Cart'})
+            M.toast({ html: 'Plan Added to Cart' })
             bronze.classList.remove('disabled')
             silver.classList.remove('disabled')
             gold.classList.remove('disabled')
@@ -392,7 +688,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     auth.onAuthStateChanged(firebaseUser => {
-        if(firebaseUser){
+        if (firebaseUser) {
             document.getElementById('main').style.display = 'block'
             document.getElementById('loader').style.display = 'none'
             user = firebaseUser;
@@ -402,35 +698,161 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function showCart(){
-    console.log('showing cart')
-    document.getElementById('cart').innerHTML = ""
-    for(var cart_item in cart_list){
-        var name = cart_list[cart_item]['name']
-        var amount = cart_list[cart_item]['amount']
-        // var total_amount = cart_item[i]['name']
-        var item = '<li class="collection-item padding-0"><div class="row margin-0 padding-16 valign-wrapper"><div class="col l4"><h6 class="bold">'+ name +'</h6></div><div class="col l5 center"><h5 class="bold">'+ amount +'</h5></div><div class="col l1"><i id="" class="material-icons remove-item right">close</i></div></div></li>'
-        document.getElementById('cart').innerHTML += item
+function submitFirebaseData() {
+    var first_name = document.getElementById('first_name')
+    var last_name = document.getElementById('last_name')
+    var business_name = document.getElementById('business_name')
+    var email = document.getElementById('email')
+    var business_line_1 = document.getElementById('business_line_1')
+    var business_line_2 = document.getElementById('business_line_2')
+    var business_phone = document.getElementById('business_phone')
+    var federal_tax_ein = document.getElementById('federal_tax_ein')
+    var business_city = document.getElementById('business_city')
+    var business_state = document.getElementById('business_state')
+    var business_zip_code = document.getElementById('business_zip_code')
+    var password = document.getElementById('password')
+    var confirm_password = document.getElementById('confirm_password')
+    profileData = {};
+    userData = {};
+    if (password.value == confirm_password.value) {
+        var password_val = password.value;
+        console.log(password_val);
+
+        user.updatePassword(password_val).then(function () {
+            // Update successful.
+            console.log('pass updated');
+        }).catch(function (error) {
+            // An error happened.
+            console.log('pass update failed');
+        });
+
+        profileData.displayName = first_name.value + " " + last_name.value;
+        profileData.emailVerified = true;
+        profileData.phoneNumber = business_phone;
+
+        user.updateProfile(profileData).then(function () {
+            // Update successful.
+            console.log('profile updated');
+        }).catch(function (error) {
+            // An error happened.
+            console.log('profile update failed');
+        });
+
+        userData['uid'] = user.uid
+        userData['first_name'] = first_name.value
+        userData['last_name'] = last_name.value
+        userData['business_name'] = business_name.value
+        userData['email'] = email.value
+        userData['business_line_1'] = business_line_1.value
+        userData['business_line_2'] = business_line_2.value
+        userData['business_phone'] = business_phone.value
+        userData['federal_tax_ein'] = federal_tax_ein.value
+        userData['business_city'] = business_city.value
+        userData['business_state'] = business_state.value
+        userData['business_zip_code'] = business_zip_code.value
+        userData['updated'] = true
+        userData['temp_pass'] = null
+
+        console.log(userData)
+
+        db.collection('users').where('email', '==', email_id).get().then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                // doc.data() is never undefined for query doc snapshots
+                id = doc.id;
+                console.log(doc.id, " => ", doc.data());
+                var userRef = db.collection('users').doc(id);
+                // console.log();
+                userRef.update(userData).then(function () {
+                    console.log("Document successfully updated!");
+                    $('.stepper').nextStep();
+                    // window.location.href = 'instructor.html';
+                    // document.getElementById('register-container').style.display = 'none'
+                    // document.getElementById('pricing-container').style.display = 'block'
+                })
+                    .catch(function (error) {
+                        // The document probably doesn't exist.
+                        console.error("Error updating document: ", error);
+                    });
+            });
+        })
+            .catch(function (error) {
+                console.log("Error getting documents: ", error);
+            });
+
+        // console.log(id);
     }
 }
 
-function itemExist(id){
+function showCart() {
+    console.log('showing cart')
+    document.getElementById('cart').innerHTML = ""
+    for (var cart_item in cart_list) {
+        console.log(cart_list[cart_item])
+        var name = cart_list[cart_item]['name']
+        var amount = cart_list[cart_item]['amount']
+        // var total_amount = cart_item[i]['name']
+        var item = '<li class="collection-item padding-0"><div class="row margin-0 padding-16 valign-wrapper"><div class="col l4"><h6 class="bold">' + name + '</h6></div><div class="col l5 center"><h5 class="bold">' + amount + '</h5></div><div class="col l1"><i id="" class="material-icons remove-item right">close</i></div></div></li>'
+        document.getElementById('cart').innerHTML += item
+    }
+
+    generateToken()
+}
+
+function itemExist(id) {
     var flag = false
-    for(var i in cart_list){
-        if (cart_list[i].id == id){
+    for (var i in cart_list) {
+        if (cart_list[i].id == id) {
             flag = true
         }
     }
     return flag
 }
 
-function removeItem(el, id){
-    for(var item = 0; item < cart_list.length; item++){
-        if(cart_list[item].id == id){
+function removeItem(el, id) {
+    for (var item = 0; item < cart_list.length; item++) {
+        if (cart_list[item].id == id) {
             cart_list.splice(item, 1);
             el.style.display = 'none'
             document.getElementById('add-' + id).style.display = 'block'
             break
         }
     }
+}
+
+function increament(el) {
+    var counter_text = el.parentElement.children[1]
+    if (Number(counter_text.innerHTML) < 5) {
+        var count = Number(counter_text.innerHTML) + 1
+        counter_text.innerHTML = count
+        // document.getElementById('marketing-poster-amount').innerHTML = "$" + Number(document.getElementById('marketing-poster-amount').innerHTML.split('$')[1]) * count;
+    }
+
+}
+
+function decreament(el) {
+    var counter_text = el.parentElement.children[1]
+    if (Number(counter_text.innerHTML) > 0) {
+        counter_text.innerHTML = Number(counter_text.innerHTML) - 1
+    }
+}
+
+function generateToken() {
+    console.log('generating token')
+    document.getElementById('payment-form').innerHTML = ""
+    var ajax = new XMLHttpRequest()
+    ajax.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            // console.log(this.responseText)
+            var response = JSON.parse(this.responseText);
+            var clientToken = response["data"]["nonce_token"]
+            // console.log(clientToken)
+            braintree.setup(clientToken, "dropin", {
+                container: "payment-form"
+            });
+            $('.stepper').nextStep();
+        }
+    }
+    ajax.open('GET', 'http://52.66.107.138/ctt/public/api/clienttokenweb', true)
+    ajax.send()
+
 }

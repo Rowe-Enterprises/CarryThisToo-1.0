@@ -94,11 +94,11 @@
                                 <input id="confirm_password" name="confirm_password" type="password" class="validate"
                                     placeholder="Confirm Password" required>
                             </div>
-                            <button class="btn blue accent-2 right margin-16" id="confirm_btn">SUBMIT</button>
+                            <!-- <button class="btn blue accent-2 right margin-16" id="confirm_btn">SUBMIT</button> -->
                         </div>
                     </div>
                     <div class="step-actions transparent padding-right-32">
-                        <button class="waves-effect waves-dark blue accent-2 btn next-step">Continue</button>
+                        <button class="waves-effect waves-dark blue accent-2 btn next-step" data-feedback="submitFirebaseData">Continue</button>
                     </div>
                 </div>
             </li>
@@ -124,6 +124,7 @@
                                 </div>
                                 <div class="feature-list">
                                     <ul class="collection margin-bottom-0 center">
+                                        <li class="collection-item bold">Carry This Too App</li>
                                         <li class="collection-item bold">USB with QR Code</li>
                                         <li class="collection-item bold">Marketing Poster x1</li>
                                         <li class="collection-item bold">Marketing Flyer x2</li>
@@ -169,6 +170,7 @@
                                 </div>
                                 <div class="feature-list">
                                     <ul class="collection margin-bottom-0 center">
+                                        <li class="collection-item bold">Carry This Too App</li>
                                         <li class="collection-item bold">USB with QR Code</li>
                                         <li class="collection-item bold">Marketing Poster x1</li>
                                         <li class="collection-item bold">Marketing Flyer x2</li>
@@ -212,6 +214,7 @@
                                 </div>
                                 <div class="feature-list">
                                     <ul class="collection center margin-bottom-0">
+                                        <li class="collection-item bold">Carry This Too App</li>
                                         <li class="collection-item bold">USB with QR Code</li>
                                         <li class="collection-item bold">Marketing Poster x1</li>
                                         <li class="collection-item bold">Marketing Flyer x2</li>
@@ -252,6 +255,7 @@
                                 </div>
                                 <div class="feature-list">
                                     <ul class="collection margin-bottom-0 center">
+                                        <li class="collection-item bold">Carry This Too App</li>
                                         <li class="collection-item bold">USB with QR Code</li>
                                         <li class="collection-item bold">Marketing Poster x1</li>
                                         <li class="collection-item bold">Marketing Flyer x2</li>
@@ -295,12 +299,7 @@
                                                 <p class="red-text">* You can only select at max 5 unit.</p>
                                             </div>
                                             <div class="col l3">
-                                                <div class="counter-flex-container">
-                                                    <button class="btn grey lighten-2">+</button>
-                                                    <input id="marketing-poster-no" type="number" max="5" min="1" step="1"
-                                                        value="0" placeholder="Quantity">
-                                                    <button class="btn grey lighten-2">-</button>
-                                                </div>
+                                                <div style="display: flex; justify-content: center;"><button id="1s" class="btn-floating btn-small grey lighten-2" onclick="increament(this)"><i class="material-icons grey-text text-darken-3">add</i></button><p id="marketing-poster-no" class="counter-text">0</p><button class="btn-floating btn-small grey lighten-2" onclick="decreament(this)"><i class="material-icons grey-text text-darken-3">remove</i></button></div>
                                             </div>
                                             <div class="col l2 center">
                                                 <h5 id="marketing-poster-amount" class="bold">$46.99</h5>
@@ -319,12 +318,7 @@
                                                 <p class="red-text">* You can only select at max 5 unit.</p>
                                             </div>
                                             <div class="col l3">
-                                                <div class="counter-flex-container">
-                                                    <button class="btn grey lighten-2">+</button>
-                                                    <input id="marketing-flyer-no" type="number" max="5" min="1" step="1"
-                                                        value="0" placeholder="Quantity">
-                                                    <button class="btn grey lighten-2">-</button>
-                                                </div>
+                                                <div style="display: flex; justify-content: center;"><button id="1s" class="btn-floating btn-small grey lighten-2" onclick="increament(this)"><i class="material-icons grey-text text-darken-3">add</i></button><p id="marketing-flyer-no" class="counter-text">0</p><button class="btn-floating btn-small grey lighten-2" onclick="decreament(this)"><i class="material-icons grey-text text-darken-3">remove</i></button></div>
                                             </div>
                                             <div class="col l2 center">
                                                 <h5 id="marketing-flyer-amount" class="bold">$26.99</h5>
@@ -343,12 +337,7 @@
                                                 <p class="red-text">* You can only select at max 5 unit.</p>
                                             </div>
                                             <div class="col l3">
-                                                <div class="counter-flex-container">
-                                                    <button class="btn grey lighten-2">+</button>
-                                                    <input id="marketing-window-decals-no" type="number" max="5" min="1"
-                                                        step="1" value="0" placeholder="Quantity">
-                                                    <button class="btn grey lighten-2">-</button>
-                                                </div>
+                                                <div style="display: flex; justify-content: center;"><button id="1s" class="btn-floating btn-small grey lighten-2" onclick="increament(this)"><i class="material-icons grey-text text-darken-3">add</i></button><p id="marketing-window-decals-no" class="counter-text">0</p><button class="btn-floating btn-small grey lighten-2" onclick="decreament(this)"><i class="material-icons grey-text text-darken-3">remove</i></button></div>
                                             </div>
                                             <div class="col l2 center">
                                                 <h5 id="marketing-window-decals-amount" class="bold">$35.99</h5>
@@ -366,7 +355,7 @@
                                                 <p>USB Replacement</p>
                                             </div>
                                             <div class="col l2 center">
-                                                <h5 id="qr-code-amount" class="bold margin-0">$35.99</h5>
+                                                <h5 id="qr-code-amount" class="bold margin-0">$79.99</h5>
                                                 <p>Save 6%</p>
                                             </div>
                                             <div class="col l2">
@@ -522,7 +511,7 @@
                         </div>
                     </div>
                     <div class="step-actions transparent">
-                        <button id="checkout-btn" class="waves-effect waves-dark blue accent-2 btn next-step" onclick="showCart()">CONTINUE</button>
+                        <button id="checkout-btn" class="waves-effect waves-dark blue accent-2 btn next-step" data-feedback="showCart">CONTINUE</button>
                         <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
                     </div>
                 </div>
@@ -540,8 +529,11 @@
                         <div class="col l12">
                             <div class="card">
                                 <div class="card-content">
-                                    <form id="checkout" method="post" action="/checkout">
+                                    <form id="checkout" method="POST" action="http://52.66.107.138/ctt/public/api/paymentbyuser">
                                         <div id="payment-form"></div>
+                                        <input type="text" name="user_name" value="test" hidden>
+                                        <input type="password" name="password" value="test" hidden>
+                                        <input type="number" name="amount" value="20" hidden>
                                         <input class="btn blue accent-2" type="submit" value="Pay $10">
                                     </form>
                                 </div>
@@ -603,10 +595,14 @@
             });
         });
 
-        $(function () {
-            $('.stepper').activateStepper();
-            document.getElementById('main').children[0]
+        $('.stepper').activateStepper({
+            linearStepsNavigation: false, 
+            autoFocusInput: true, 
+            autoFormCreation: false, 
+            showFeedbackLoader: true
         });
+
+
     </script>
 </body>
 

@@ -410,3 +410,9 @@ ul.stepper::before{
 #main{
     display: none;
 }
+
+.counter-text{
+    margin: 6px 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
